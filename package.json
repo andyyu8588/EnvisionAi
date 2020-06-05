@@ -1,0 +1,35 @@
+{
+  "name": "vision",
+  "version": "1.0.0",
+  "description": "analyze and predict trends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed99win/FutureSight.git"
+  },
+  "keywords": [
+    "trend",
+    "ai",
+    "tensorflow",
+    "node",
+    "express",
+    "angular",
+    "api"
+  ],
+  "author": "edwin, simon, andy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ed99win/FutureSight/issues"
+  },
+  "homepage": "https://github.com/ed99win/FutureSight#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
