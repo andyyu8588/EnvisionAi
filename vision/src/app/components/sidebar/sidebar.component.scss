@@ -1,13 +1,13 @@
 mat-drawer-container {
     height: 100%;
-    max-width: 35%;
+    max-width: 500px;
     overflow-x: hidden !important;
     background-color: rgba(255,255,100, $alpha: 0);
 }
 
 ngx-charts-pie-grid {
     left: 2%;
-    right: 2%;
+    height: 1000 px;
 }
 
 
@@ -23,9 +23,9 @@ ngx-charts-pie-grid {
 }
 
 mat-slider {
-    position: absolute;
     bottom: 2%;
     left: 4%;
     right: 4%;
-    // width: 80%;
+    width: 100%;
 }
+
