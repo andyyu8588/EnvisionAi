@@ -10,13 +10,13 @@ export class TensorflowService {
   private Model: tf.LayersModel
 
   constructor() {
-    tf.loadLayersModel(environment.backend.Tfmodel)
-    .then((layerModel) => {
-      console.log('model imported successfully')
-      this.Model = layerModel
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+    // tf.loadLayersModel(environment.backend.Tfmodel)
+    // .then((layerModel) => {
+    //   console.log('model imported successfully')
+    //   this.Model = layerModel
+    // })
+    // .catch((err) => {
+    //   console.log(err)
+    // })
   }
 }
