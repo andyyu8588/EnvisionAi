@@ -1,11 +1,37 @@
 <form id="form" [formGroup]="searchForm" (ngSubmit)="onSubmit($event)">
-    <mat-form-field class="">
-        <mat-label class="">Search for a trend</mat-label>
-        <input matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">
-        
 
-        <mat-autocomplete class="">
+    <div class="row">
+        <!-- keyword -->
+        <mat-form-field class="col-6">
+            <mat-label class="">Search for a trend</mat-label>
+            <input matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">              
+        </mat-form-field>
 
-        </mat-autocomplete>
-    </mat-form-field>
+        <!-- year -->
+        <mat-form-field class="col-4">
+            <mat-label class="">Select a year</mat-label>
+            <mat-select formControlName="year">
+                <mat-option value="2004">2004</mat-option>
+                <mat-option value="2005">2005</mat-option>
+                <mat-option value="2006">2006</mat-option>
+                <mat-option value="2007">2007</mat-option>
+                <mat-option value="2008">2008</mat-option>
+                <mat-option value="2009">2009</mat-option>
+                <mat-option value="2010">2010</mat-option>
+                <mat-option value="2011">2011</mat-option>
+                <mat-option value="2012">2012</mat-option>
+                <mat-option value="2013">2013</mat-option>
+                <mat-option value="2014">2014</mat-option>
+                <mat-option value="2015">2015</mat-option>
+                <mat-option value="2016">2016</mat-option>
+                <mat-option value="2017">2017</mat-option>
+                <mat-option value="2018">2018</mat-option>
+                <mat-option value="2019">2019</mat-option>
+                <mat-option value="2020">2020</mat-option>
+            </mat-select>
+        </mat-form-field>       
+
+        <!-- submit button -->
+        <img class="col-2" src="assets/img/logo.png" (click)="onSubmit($event)">
+    </div>   
 </form>
