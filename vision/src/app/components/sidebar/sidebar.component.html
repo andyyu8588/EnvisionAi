@@ -7,10 +7,11 @@
         </button>
         <app-searchbar class=""></app-searchbar>
 
-        <div class="row">
-        <div class="col-6 overflow">
+        <div class="row outer">
+
+        <div class="col-6 inner">
           <ngx-charts-pie-grid class
-            [view]=[240,1500]
+            [view]="view"
             [scheme]="colorScheme"
             [results]="single"
             (select)="onSelect($event)">
