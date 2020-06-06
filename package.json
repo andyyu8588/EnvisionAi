@@ -28,7 +28,8 @@
   "homepage": "https://github.com/ed99win/FutureSight#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mapbox-gl": "^1.10.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
