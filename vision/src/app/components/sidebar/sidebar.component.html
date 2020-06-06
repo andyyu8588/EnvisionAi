@@ -3,7 +3,8 @@
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
             <span>&times;</span>
         </button>
-        <app-searchbar class=""></app-searchbar> 
+        <app-searchbar class=""></app-searchbar>
+
         <mat-slider
             thumbLabel
             [displayWith]="formatLabel"
@@ -12,11 +13,10 @@
             max="100000">
         </mat-slider>
     </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Open Sidebar
-      </button>
-    </div>
-  
 </mat-drawer-container>
+
+<div id="openBtn">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Open Sidebar
+    </button>
+</div>
