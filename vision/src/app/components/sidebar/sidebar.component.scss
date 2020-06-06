@@ -5,6 +5,12 @@ mat-drawer-container {
     background-color: rgba(255,255,100, $alpha: 0);
 }
 
+ngx-charts-pie-grid {
+    left: 2%;
+    right: 2%;
+}
+
+
 #closeBtn {
     position: absolute;
     right: 0px;
@@ -19,7 +25,7 @@ mat-drawer-container {
 mat-slider {
     position: absolute;
     bottom: 2%;
-    left: 2%;
-    right: 2%;
+    left: 4%;
+    right: 4%;
     // width: 80%;
 }

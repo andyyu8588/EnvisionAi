@@ -4,6 +4,12 @@
             <span>&times;</span>
         </button>
         <app-searchbar class=""></app-searchbar>
+        <ngx-charts-pie-grid
+            [view]='view'
+            [scheme]="colorScheme"
+            [results]="single"
+            (select)="onSelect($event)">
+        </ngx-charts-pie-grid>
 
         <mat-slider
             thumbLabel

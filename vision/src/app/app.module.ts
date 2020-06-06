@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ResizableModule  } from 'angular-resizable-element';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -99,6 +100,7 @@ import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.com
     MatTooltipModule,
     MatTreeModule,
     BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
