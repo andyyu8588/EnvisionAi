@@ -1,9 +1,15 @@
-<mat-drawer-container style="overflow-x: hidden;" class="" autosize>
-    <mat-drawer #drawer class="container-fluid" mode="side" opened='true'>
+<mat-drawer-container style="overflow-x: hidden;" class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
+    <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
             <span>&times;</span>
         </button>
         <app-searchbar class=""></app-searchbar>
+        <ngx-charts-pie-grid
+            [view]='view'
+            [scheme]="colorScheme"
+            [results]="single"
+            (select)="onSelect($event)">
+        </ngx-charts-pie-grid>
 
         <mat-slider
             thumbLabel
@@ -12,11 +18,13 @@
             min="1"
             max="100000">
         </mat-slider>
-    </mat-drawer>
+    </mat-sidenav>
+
 </mat-drawer-container>
 
 <div id="openBtn">
     <button type="button" mat-button (click)="drawer.toggle()">
-      Open Sidebar
+    Open Sidebar
     </button>
 </div>
+
