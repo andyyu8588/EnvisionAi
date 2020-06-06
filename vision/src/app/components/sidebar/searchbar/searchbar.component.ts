@@ -34,6 +34,9 @@ export class SearchbarComponent implements OnInit {
       this.sidebarService.parseCountries(res)
       this.arraybyDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
       console.log(this.byDate)
+      // this.sidebarService.parseCountries(res)
+      // this.byDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
+      console.log(res)
     }).catch((err) => {
       console.log(err)
     })
