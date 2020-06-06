@@ -6,6 +6,7 @@ export const environment = {
   production: false,
 
   backend: {
+    trendsapi: 'http://localhost:3000/search',
     Tfmodel: 'http://localhost:3000/Tfmodel'
   },
 

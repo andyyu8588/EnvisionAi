@@ -48,13 +48,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MapComponent } from './components/map/map.component';
 import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     MapComponent,
-    SearchbarComponent
+    SearchbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -102,7 +103,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTreeModule,
     BrowserAnimationsModule,
     NgxChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

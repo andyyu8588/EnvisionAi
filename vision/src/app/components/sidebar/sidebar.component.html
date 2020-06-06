@@ -15,7 +15,18 @@
             [scheme]="colorScheme"
             [results]="single"
             (select)="onSelect($event)">
-          </ngx-charts-pie-grid>
+        </ngx-charts-pie-grid>
+
+        <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="100000">
+        </mat-slider>
+        <button (click)='getData()'>
+            Get Data
+        </button>
 
           <mat-slider
               class="daily"

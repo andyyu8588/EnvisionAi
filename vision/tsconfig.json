@@ -1,5 +1,5 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": false,  
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -10,6 +10,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "skipLibCheck": true,
     "target": "es2015",
     "types": ["node"],
     "typeRoots": [
