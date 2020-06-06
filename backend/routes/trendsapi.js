@@ -35,7 +35,7 @@ router.get('', (req, res, next) => {
 // fill up finalData
 async function getData(keyword, year) {
   // reset finalData
-  // finalData = []
+  finalData = []
 
   // set start and end times
   let startTime = new Date(`${year}-01-01`)
@@ -49,7 +49,7 @@ async function getData(keyword, year) {
 
       // prepare countryData contianer
       let countryData = {
-        name: searchedCountries[i]  ,     
+        country: searchedCountries[i],     
         keyword,
         data: []
       }
@@ -80,7 +80,8 @@ async function getData(keyword, year) {
   .then((res) => {
 
     // prepare countryData contianer
-    let countryData = {      
+    let countryData = {    
+      country: 'Global',
       keyword,
       data: []
     }
@@ -91,7 +92,7 @@ async function getData(keyword, year) {
     // we push each week to countryData
     parsedData.default.timelineData.forEach((element) => {
       countryData.data.push({
-        country: 'Global',
+        name: 'Global',
         date: element.formattedTime,
         hasData: element.hasData[0],
         value: element.value[0]
