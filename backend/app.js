@@ -18,7 +18,6 @@ app.use((req, res, next) => {
 
 app.use('/Tfmodel', TfmodelRoute)
 app.use('/search', trendsapiRoute)
-
 app.use('/home', TestRoute)
 
 module.exports = app

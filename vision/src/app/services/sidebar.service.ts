@@ -18,8 +18,8 @@ export class SidebarService implements OnDestroy{
 
   parseCountries(_countries):any{
     let parsedData = []
-    for (var i = 0; i< _countries[0].data.length; i++){
-    _countries.forEach(country => {
+    for (var i = 0; i< (_countries.data)[0].data.length; i++){
+    (_countries.data).forEach(country => {
       parsedData.push[country[i]]
     }
     );

@@ -31,17 +31,6 @@ export class SidebarComponent implements OnInit {
     console.log('clicked')
     console.log(event);
   }
-  
-  getData() {
-    this.trendsapiService.getData({
-      keyword: 'Donald Trump',
-      year: 2019
-    }).then((res) => {
-      console.log(res)
-    }).catch((err) => {
-      console.log(err)
-    })
-  }
 
   ngOnInit(): void {
   }
