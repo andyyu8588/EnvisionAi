@@ -1,0 +1,17 @@
+mat-drawer-container {
+    z-index: 1;
+    height: 100%;
+    max-width: 35%;
+    overflow-x: hidden !important;
+    background-color: rgba(255,255,100, $alpha: 0);
+}
+
+mat-drawer {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+#closeBtn {
+    position: absolute;
+    right: 0px;
+}
