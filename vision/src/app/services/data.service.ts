@@ -13,7 +13,7 @@ export class DataService {
 
   getData(i){
   this.arraybyDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
-  console.log(this.arraybyDate)
+  // console.log(this.arraybyDate)
   return (this.arraybyDate)[i]
   }
 }
