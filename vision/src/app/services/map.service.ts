@@ -19,6 +19,6 @@ export class MapService {
       style: 'mapbox://styles/travelnet/ck99afyp80hhu1iqrodjf1brl',
       center: [-71.22, 46.85], // starting position
       zoom: 2, // starting zoom
-  })
-}
+    })
+  }
 }
