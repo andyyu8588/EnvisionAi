@@ -3,10 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false,
 
   mapbox: {
-    token: 'pk.eyJ1IjoidHJhdmVsbmV0IiwiYSI6ImNrOTk3cHkwaDAzaHkzZHEwMm03ZGN0MG8ifQ.j24u0Q5RbYw7PW4tVpGjmQ',
+    token: 'pk.eyJ1IjoidHJhdmVsbmV0IiwiYSI6ImNrYjJ4bnpxZDBnMHUydG10cXJmeGNjazEifQ.Z2ajmP1ywUc77Z74VlXmWw',
     geocoding: 'https://api.mapbox.com/geocoding/v5/mapbox.places'
   },
 }
