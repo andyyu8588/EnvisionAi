@@ -16,7 +16,7 @@ export class MapService {
     this.map = new Mapboxgl.Map({
       accessToken: environment.mapbox.token,
       container: 'mapbox', // container id
-      style: 'mapbox://styles/travelnet/ck99afyp80hhu1iqrodjf1brl',
+      style: 'mapbox://styles/travelnet/ckb32151e0ge11ijopc5mbegm',
       center: [-71.22, 46.85], // starting position
       zoom: 2, // starting zoom
     })
