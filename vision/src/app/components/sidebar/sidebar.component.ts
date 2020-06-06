@@ -14,7 +14,7 @@ import { single } from './data';
 })
 export class SidebarComponent implements OnInit {
   single: any[];
-  view: any[] = [window.innerWidth*0.30, window.innerHeight*0.8]
+  view: any[] = [240,1500]
   // options
   showLegend: boolean = true;
   showLabels: boolean = true;
@@ -28,6 +28,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onSelect(event) {
+    console.log('clicked')
     console.log(event);
   }
 
