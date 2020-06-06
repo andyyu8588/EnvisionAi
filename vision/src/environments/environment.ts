@@ -5,6 +5,10 @@
 export const environment = {
   production: false,
 
+  backend: {
+    Tfmodel: 'http://localhost:3000/Tfmodel'
+  },
+
   mapbox: {
     token: 'pk.eyJ1IjoidHJhdmVsbmV0IiwiYSI6ImNrYjJ4bnpxZDBnMHUydG10cXJmeGNjazEifQ.Z2ajmP1ywUc77Z74VlXmWw',
     geocoding: 'https://api.mapbox.com/geocoding/v5/mapbox.places'

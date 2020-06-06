@@ -1,3 +1,4 @@
+import { TensorflowService } from './../../services/tensorflow.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ResizableModule } from 'angular-resizable-element';
 import { TrendsapiService } from './../../services/trendsapi.service';
@@ -20,7 +21,7 @@ export class SidebarComponent implements OnInit {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor() {
+  constructor(private TensorflowService: TensorflowService) {
     Object.assign(this, { single });
   }
 

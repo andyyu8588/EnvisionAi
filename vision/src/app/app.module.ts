@@ -47,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MapComponent } from './components/map/map.component';
 import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.com
     MatTooltipModule,
     MatTreeModule,
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
