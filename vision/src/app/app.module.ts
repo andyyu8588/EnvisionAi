@@ -42,12 +42,14 @@ import { MatTreeModule } from '@angular/material/tree';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MapComponent } from './components/map/map.component';
+import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    MapComponent
+    MapComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

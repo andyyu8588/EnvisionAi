@@ -1,8 +1,9 @@
 <mat-drawer-container style="overflow-x: hidden;" class="" autosize>
-    <mat-drawer #drawer class="container-fluid" mode="side">
+    <mat-drawer #drawer class="container-fluid" mode="side" opened='true'>
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
             <span>&times;</span>
         </button>
+        <app-searchbar class=""></app-searchbar> 
 
     </mat-drawer>
   
