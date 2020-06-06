@@ -12,4 +12,8 @@ export class SearchbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    console.log('lit')
+  }
+
 }

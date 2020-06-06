@@ -6,14 +6,18 @@ const router = express.Router()
 // json console.log reader
 const util = require('util')
 
+let finalData = []
+
 // countries searched
 let searchedCountries = ['US', 'CA', 'MX', 'RU', 'DE', 'TR', 'UK', 'FR', 'IT', 'ES', 'UA', 'PL', 'RO', 'CN', 'IN', 'ID', 'PK', 'JP', 'PH', 'VN']
 // let searchedCountries = ['DE', 'TR', 'UK', 'FR']
-let finalData = []
 
 router.get('', (req, res, next) => {
   if (req.params) {
-    getData(req.params.keyword, req.params.year).then((done) => {
+    getData(req.query.keyword, req.query.year).then((done) => {
+      console.log(typeof(req.query.keyword))
+      console.log(typeof(req.query.year))
+      console.log(util.inspect(finalData, {showHidden: false, depth: null}))
       res.status(200).json({
         data: finalData
       })
@@ -32,7 +36,7 @@ async function getData(keyword, year) {
   // loop through searchedCountries array
   for (let i = 0; i < 20; i++) {
     await googleTrends.interestOverTime({keyword, startTime, endTime, 
-    geo: searchedCountries[i]})
+    geo: 'US'})
     .then((res) => {
       let countryData = {
         country: searchedCountries[i],        
@@ -51,13 +55,13 @@ async function getData(keyword, year) {
       finalData.push(countryData)
     })
     .catch((err) => {
-      
+      // console.log(err)
     })
   }
 }
 
-getData('Donald Trump', 2017).then((res) => {
-  console.log(util.inspect(finalData, {showHidden: false, depth: null}))
-})
+// getData('Donald Trump', '2017').then((res) => {
+//   console.log(util.inspect(finalData, {showHidden: false, depth: null}))
+// })
 
 module.exports = router

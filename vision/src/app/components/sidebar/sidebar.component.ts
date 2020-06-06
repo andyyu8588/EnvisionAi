@@ -23,16 +23,16 @@ export class SidebarComponent implements OnInit {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor(private TensorflowService: TensorflowService, private HttpClient: HttpClient) {
+  constructor(private TensorflowService: TensorflowService, private trendsapiService: TrendsapiService) {
     Object.assign(this, { single });
   }
 
   onSelect(event) {
     console.log(event);
   }
-
-  ngOnInit(): void {
-    this.getData({
+  
+  getData() {
+    this.trendsapiService.getData({
       keyword: 'Donald Trump',
       year: 2019
     }).then((res) => {
@@ -42,16 +42,7 @@ export class SidebarComponent implements OnInit {
     })
   }
 
-  getData(params: any) {
-    return new Promise((resolve, reject) => {
-      this.HttpClient.get<any>(environment.backend.trendsapi, {
-        params 
-      }).subscribe((res) => {
-        resolve(res)
-      }, (err) => {
-        reject(err)
-      })
-    })
+  ngOnInit(): void {
   }
 
   formatLabel(value: number) {
