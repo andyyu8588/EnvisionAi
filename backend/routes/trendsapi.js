@@ -13,14 +13,16 @@ let searchedCountries = ['US', 'CA', 'MX', 'RU', 'DE', 'TR', 'GB', 'FR', 'IT', '
 
 router.get('', (req, res, next) => {
   console.log('search request received')
+  console.log(req.query.keyword)
+  console.log(req.query.year)
   if (req.params) { // if there are params
     getData(req.query.keyword, req.query.year).then((done) => { // successful search with keyword and year
       console.log('results delivered')
     
-    // for debugging purposes
-    // console.log(util.inspect(finalData, {showHidden: false, depth: null}))
+      // for debugging purposes
+      console.log(util.inspect(finalData, {showHidden: false, depth: null}))
 
-    // send back the data
+      // send back the data
       res.status(200).json({
         data: finalData
       })
@@ -33,7 +35,7 @@ router.get('', (req, res, next) => {
 // fill up finalData
 async function getData(keyword, year) {
   // reset finalData
-  finalData = []
+  // finalData = []
 
   // set start and end times
   let startTime = new Date(`${year}-01-01`)
@@ -46,7 +48,8 @@ async function getData(keyword, year) {
     .then((res) => {
 
       // prepare countryData contianer
-      let countryData = {       
+      let countryData = {
+        name: searchedCountries[i]  ,     
         keyword,
         data: []
       }
@@ -57,7 +60,7 @@ async function getData(keyword, year) {
       // we push each week to countryData
       parsedData.default.timelineData.forEach((element) => {
         countryData.data.push({
-          country: searchedCountries[i],
+          name: searchedCountries[i],
           date: element.formattedTime,
           hasData: element.hasData[0],
           value: element.value[0]
