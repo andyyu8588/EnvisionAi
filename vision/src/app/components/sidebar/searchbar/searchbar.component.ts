@@ -1,4 +1,7 @@
+import { TrendsapiService } from './../../../services/trendsapi.service';
+import { Event } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-searchbar',
@@ -6,14 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchbar.component.scss']
 })
 export class SearchbarComponent implements OnInit {
+  searchForm: FormGroup
 
-  constructor() { }
+  constructor(private trendsapiService: TrendsapiService) { }
 
   ngOnInit(): void {
+    this.searchForm = new FormGroup({
+      'keyword': new FormControl(null)
+    })
   }
 
-  onSubmit() {
-    console.log('lit')
+  onSubmit(event) {
+    event.preventDefault()
+    this.trendsapiService.getData({
+      keyword: 'Donald Trump',
+      year: 2019
+    }).then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
   }
 
 }

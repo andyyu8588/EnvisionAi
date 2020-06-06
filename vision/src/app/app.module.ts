@@ -56,8 +56,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidebarComponent,
     MapComponent,
     SearchbarComponent,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   imports: [
     BrowserModule,
@@ -105,7 +103,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTreeModule,
     BrowserAnimationsModule,
     NgxChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
