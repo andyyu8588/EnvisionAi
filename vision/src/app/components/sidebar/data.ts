@@ -66,7 +66,8 @@ export var single = [
     {
       "name": "Spain",
       "value": 8200000
-    },{
+    },
+    {
     "name": "Canada",
     "value": 1234567
 

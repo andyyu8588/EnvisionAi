@@ -16,15 +16,20 @@ export class SidebarService implements OnDestroy{
   public byDate: Observable<any> = this._byDate.asObservable()
   constructor(){}
 
+
   parseCountries(_countries):any{
-    let parsedData = []
+    let parsedData = [];
     for (var i = 0; i< (_countries.data)[0].data.length; i++){
-    (_countries.data).forEach(country => {
-      parsedData.push[country[i]]
-    }
-    );
+     let parsedDay = [];
+      (_countries.data).forEach(country => {
+        parsedDay.push((country.data)[i])
+        });
+        parsedData.push(parsedDay)
+
+      }
+    console.log(parsedData)
     this._byDate.next(parsedData)
-  }}
+    }
   getCountriesData(_byDate, index ):any{
     return _byDate[index]
   }

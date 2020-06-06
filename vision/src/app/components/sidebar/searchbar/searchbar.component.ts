@@ -31,6 +31,9 @@ export class SearchbarComponent implements OnInit {
       keyword: this.searchForm.get('keyword').value,
       year: 2019
     }).then((res) => {
+      this.sidebarService.parseCountries(res)
+      this.arraybyDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
+      console.log(this.byDate)
       // this.sidebarService.parseCountries(res)
       // this.byDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
       console.log(res)
