@@ -1,3 +1,4 @@
+import { ResizableModule } from 'angular-resizable-element';
 import { TrendsapiService } from './../../services/trendsapi.service';
 import { Component, OnInit } from '@angular/core';
 

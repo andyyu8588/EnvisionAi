@@ -24,6 +24,7 @@
     "@swimlane/ngx-charts": "^14.0.0",
     "@tensorflow/tfjs": "^2.0.0",
     "@types/mapbox-gl": "^1.10.2",
+    "angular-resizable-element": "^3.3.2",
     "bootstrap": "^4.5.0",
     "google-trends-api": "^4.9.0",
     "jquery": "^3.5.1",
