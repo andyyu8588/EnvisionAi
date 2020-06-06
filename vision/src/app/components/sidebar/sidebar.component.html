@@ -1,11 +1,16 @@
-<mat-drawer-container style="overflow-x: hidden;" class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
-    <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
+
+    <mat-drawer-container style="overflow-x: hidden;" class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
+
+      <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
             <span>&times;</span>
         </button>
         <app-searchbar class=""></app-searchbar>
-        <ngx-charts-pie-grid
-            [view]='view'
+
+        <div class="row">
+        <div class="col-6 overflow">
+          <ngx-charts-pie-grid class
+            [view]=[240,1500]
             [scheme]="colorScheme"
             [results]="single"
             (select)="onSelect($event)">
@@ -21,13 +26,27 @@
         <button (click)='getData()'>
             Get Data
         </button>
+
+          <mat-slider
+              class="daily"
+              thumbLabel
+              [displayWith]="formatLabel"
+              tickInterval="1000"
+              min="1"
+              max="100000">
+          </mat-slider>
+        </div>
+        <div class="col-6"></div>
+      </div>
+
     </mat-sidenav>
 
-</mat-drawer-container>
+  </mat-drawer-container>
 
-<div id="openBtn">
-    <button type="button" mat-button (click)="drawer.toggle()">
-    Open Sidebar
-    </button>
-</div>
+  <div id="openBtn">
+      <button type="button" mat-button (click)="drawer.toggle()">
+      Open Sidebar
+      </button>
+  </div>
+
 
