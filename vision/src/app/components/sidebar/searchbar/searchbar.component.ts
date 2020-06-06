@@ -32,7 +32,7 @@ export class SearchbarComponent implements OnInit {
       year: 2019
     }).then((res) => {
       this.sidebarService.parseCountries(res)
-      this.byDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
+      this.arraybyDate = this.sidebarService.byDate.subscribe((byDate)=>this.byDate = byDate)
       console.log(this.byDate)
     }).catch((err) => {
       console.log(err)
