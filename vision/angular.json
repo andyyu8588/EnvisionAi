@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "vision"
+  "defaultProject": "vision",
+  "cli": {
+    "analytics": "3cb04246-28ec-4ca9-b25b-8202d1958fef"
+  }
 }
