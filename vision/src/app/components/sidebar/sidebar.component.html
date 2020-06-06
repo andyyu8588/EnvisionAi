@@ -13,17 +13,20 @@
           <ngx-charts-pie-grid class
             [view]="view"
             [scheme]="colorScheme"
-            [results]="single"
-            (select)="onSelect($event)">
+            [results]="single">
         </ngx-charts-pie-grid>
 
+
         <mat-slider
-            thumbLabel
-            [displayWith]="formatLabel"
-            tickInterval="1000"
-            min="1"
-            max="56">
+          #matslider
+          [displayWith]="formatLabel"
+          min="1"
+          max="56"
+          [value] = "matslider"
+          (input)='changeDate($event)'
+          >
         </mat-slider>
+        <span>{{matslider.value}}</span>
 
         </div>
         <div class="col-6">

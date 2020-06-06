@@ -4,6 +4,7 @@ import { TensorflowService } from './../../services/tensorflow.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ResizableModule } from 'angular-resizable-element';
 import { TrendsapiService } from './../../services/trendsapi.service';
+import { DataService } from './../../services/data.service'
 import { Component, OnInit } from '@angular/core';
 import { single } from './data';
 
@@ -23,13 +24,14 @@ export class SidebarComponent implements OnInit {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor(private TensorflowService: TensorflowService, private trendsapiService: TrendsapiService) {
+  constructor(private DataService: DataService, private TensorflowService: TensorflowService, private trendsapiService: TrendsapiService) {
     Object.assign(this, { single });
   }
 
-  onSelect(event) {
-    console.log('clicked')
-    console.log(event);
+
+  changeDate(date){
+    console.log(this.DataService.getData(date.value))
+   Object.assign(this,this.DataService.getData(date.value))
   }
 
   ngOnInit(): void {

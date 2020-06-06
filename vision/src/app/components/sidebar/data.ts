@@ -1,77 +1,30 @@
-import { SidebarService } from  './../../services/sidebar.service'
-import { Subscription } from 'rxjs';
 export var single = [
     {
       "name": "Germany",
-      "value": 8940000
+      "value": 1
     },
     {
       "name": "USA",
-      "value": 5000000
+      "value": 1
     },
     {
       "name": "France",
-      "value": 7200000
+      "value": 1
     },
     {
       "name": "UK",
-      "value": 6200000
+      "value": 1
     },
     {
       "name": "Italy",
-      "value": 4200000
+      "value": 1
     },
     {
       "name": "Spain",
-      "value": 8200000
-    },{
-    "name": "Canada",
-    "value": 1234567
-
-    },
-    {
-      "name": "Germany",
-      "value": 8940000
-    },
-    {
-      "name": "USA",
-      "value": 5000000
-    },
-    {
-      "name": "France",
-      "value": 7200000
-    },
-    {
-      "name": "UK",
-      "value": 6200000
-    },
-    {
-      "name": "Italy",
-      "value": 4200000
-    },
-    {
-      "name": "Spain",
-      "value": 8200000
-    },{
-    "name": "Canada",
-    "value": 1234567
-
-    },
-    {
-      "name": "UK",
-      "value": 6200000
-    },
-    {
-      "name": "Italy",
-      "value": 4200000
-    },
-    {
-      "name": "Spain",
-      "value": 8200000
+      "value": 1
     },
     {
     "name": "Canada",
-    "value": 1234567
-
+    "value": 1
     }
   ];
