@@ -4,10 +4,21 @@ mat-drawer-container {
     overflow-x: hidden !important;
     background-color: rgba(255,255,100, $alpha: 0);
 }
-
+mat-drawer-inner-container{
+  overflow: hidden;
+}
 ngx-charts-pie-grid {
     left: 2%;
+    width: 240 px;
     height: 1000 px;
+}
+.inner{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.outer{
+  height: 95%;
+  position: relative;
 }
 
 
@@ -23,9 +34,11 @@ ngx-charts-pie-grid {
 }
 
 mat-slider {
-    bottom: 2%;
+    top: 2%;
     left: 4%;
     right: 4%;
     width: 100%;
+    position: sticky;
 }
+
 

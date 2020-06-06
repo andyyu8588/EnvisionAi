@@ -54,5 +54,21 @@ export var single = [
     "name": "Canada",
     "value": 1234567
 
+    },
+    {
+      "name": "UK",
+      "value": 6200000
+    },
+    {
+      "name": "Italy",
+      "value": 4200000
+    },
+    {
+      "name": "Spain",
+      "value": 8200000
+    },{
+    "name": "Canada",
+    "value": 1234567
+
     }
   ];
