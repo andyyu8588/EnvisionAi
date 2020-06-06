@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { TensorflowService } from './../../services/tensorflow.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ResizableModule } from 'angular-resizable-element';
@@ -21,7 +23,7 @@ export class SidebarComponent implements OnInit {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor(private TensorflowService: TensorflowService) {
+  constructor(private TensorflowService: TensorflowService, private HttpClient: HttpClient) {
     Object.assign(this, { single });
   }
 
@@ -30,6 +32,26 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getData({
+      keyword: 'Donald Trump',
+      year: 2019
+    }).then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+  getData(params: any) {
+    return new Promise((resolve, reject) => {
+      this.HttpClient.get<any>(environment.backend.trendsapi, {
+        params 
+      }).subscribe((res) => {
+        resolve(res)
+      }, (err) => {
+        reject(err)
+      })
+    })
   }
 
   formatLabel(value: number) {
