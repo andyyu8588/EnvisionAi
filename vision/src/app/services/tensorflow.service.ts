@@ -5,8 +5,6 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment.prod';
 import { Injectable, OnDestroy, AfterContentInit } from '@angular/core';
 import * as tf from '@tensorflow/tfjs'
-import { prepareSyntheticListenerName } from '@angular/compiler/src/render3/util';
-import { model } from '@tensorflow/tfjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,16 +24,16 @@ export class TensorflowService implements OnDestroy {
   // selectedData: number[] = [0,1,2,3,4,5,6,7,8,9]
 
   // training parameters
-  epochs: number = 45
-  split: number = 6
-  windowSize: number = 8
+  epochs: number = 50
+  split: number = Math.floor(this.selectedData.length*1)
+  windowSize: number = 4
   batchSize: number = 3
 
   // finished dataset
-  trainSet = tf.ones([2,3])
-  targetSet = tf.ones([2,1])
-  // trainSet
-  // targetSet
+  // trainSet = [tf.ones([2,3])]
+  // targetSet = [tf.ones([2,1])]
+  inputSet
+  targetSet
 
   validateInput
   validateTarget
@@ -43,8 +41,8 @@ export class TensorflowService implements OnDestroy {
   constructor(private TrendsapiService: TrendsapiService) {
     // subscribe to trendsapi calls
     this.receivedData_sub = this.TrendsapiService.receivedData.subscribe(data => {
-      this.presentData = data
-      this.selectCountry('US')
+      // this.presentData = data
+      // this.selectCountry('US')
       // this.createDataset()
       // this.train()
     })
@@ -56,16 +54,16 @@ export class TensorflowService implements OnDestroy {
     .then((layerModel) => {
       console.log('model imported successfully')
       this.Model = layerModel
-      // this.createDataset()
-      // .then(() => {
-        console.log(this.trainSet)
+      this.createDataset()
+      .then(() => {
+        console.log(this.inputSet)
         console.log(this.targetSet)
-      //   this.train()
-      // })
-      // .catch(() => {
-      //   console.log('dfda')
-      // })
-      this.train()
+        this.train()
+      })
+      .catch(() => {
+        console.log('dfda')
+      })
+      // this.train()
     })
     .catch((err) => {
       console.log(err)
@@ -90,60 +88,72 @@ export class TensorflowService implements OnDestroy {
   }
 
   // slice arrays for createDataset 
-  sliceArr(arr: any[]): any {
-    let inputs: any[] = []
-    let targets: any[] = []
-    for (let x = 0; x < arr.length; x++) {
-      if (x+this.windowSize > arr.length) {
-        break
-      } else {
-        let input = (arr.slice(x, (x+this.windowSize - 1)))
-        let target = ([arr[x+this.windowSize]])
-        inputs.push(input)
-        targets.push(target)
-        // tensor.push([tf.tensor1d(arr.slice(x, (x+this.windowSize -1))), tf.tensor1d([arr[x+(this.windowSize - 1)]])])
+  sliceArr(arr: any[]): Promise<{[key: string]: any}> {
+    return new Promise((resolve, reject) => {
+      let inputs: any[] = []
+      let targets: any[] = []
+      for (let x = 0; x < arr.length; x++) {
+        if (x+this.windowSize > arr.length) {
+          resolve({inputs: inputs, targets: targets})
+          break
+        } else {
+          let input = (arr.slice(x, (x+this.windowSize - 1)))
+          let target = ([arr[x+this.windowSize]])
+          inputs.push(input)
+          targets.push(target)
+          // console.log(inputs, targets)
+          // tensor.push([tf.tensor1d(arr.slice(x, (x+this.windowSize -1))), tf.tensor1d([arr[x+(this.windowSize - 1)]])])
+        }
       }
-    }
-    // console.log(tensor)
-    return [inputs, targets]
+      // console.log(tensor)
+      resolve({inputs: inputs, targets: targets})
+    })
+
   }
   
   // creates dataset for training
-  createDataset() {
+  createDataset(): any {
     return new Promise((resolve, reject) => {
       if (this.selectedData) {
         let _train: number[] = this.selectedData.slice(0, this.split)
+        // _train = _train.slice((Math.floor(_train.length/(this.windowSize-1))))
         let _validate: number[] = this.selectedData.slice(this.split)
+        // _validate = _validate.slice((Math.floor(_validate.length/this.windowSize)))
 
-        // this.validateSet = tf.data.array(this.sliceArr(_validate))
 
-        // this.validateSet = tf.data.generator(this.sliceArr(_validate))
-        
-        let _trainSet = this.sliceArr(_train)
-        this.trainSet = tf.tensor(_trainSet[0])
-        this.targetSet = tf.tensor(_trainSet[1])
-
-        let _validateSet = this.sliceArr(_validate)
-        this.validateInput = tf.tensor(_validateSet[0])
-        this.validateTarget = tf.tensor(_validateSet[1])
-        resolve()
-        // let _trainBatch = ([[], []])
-
-        // _trainSet.forEach(element => {
-        //   _trainBatch[0].push(element[0])
-        //   _trainBatch[1].push(element[1])
-        // });
-
-        // let _validateBatch = [[], []]
-
-        // _validateSet.forEach(element => {
-        //   _validateBatch[0].push(element[0])
-        //   _validateBatch[1].push(element[1])
-        // });
-
-        // this.trainSet = tf.tensor2d(_trainBatch)
-        // this.validateSet = tf.tensor2d(_validateBatch)
+        this.sliceArr(_train)
+        .then((res) => {
+          let _inputSet: number[] = []
+          res.inputs.forEach((element: number[]) => {
+            _inputSet = _inputSet.concat(element)
+          })
+          let _inputTargets: number[] = []
+          res.targets.forEach((element: number[]) => {
+            _inputTargets = _inputTargets.concat(element)
+          })
+          console.log(_inputSet.length, _inputTargets.length)
+          this.inputSet = tf.tensor2d(_inputSet, [(_inputSet.length/(this.windowSize-1)), this.windowSize -1], 'int32')
+          this.targetSet = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
+          
+          
+          this.sliceArr(_validate)
+          .then((res) => {
+            let _inputSet: number[] = []
+            res.inputs.forEach((element: number[]) => {
+              _inputSet = _inputSet.concat(element)
+            })
+            let _inputTargets: number[] = []
+            res.targets.forEach((element: number[]) => {
+              _inputTargets = _inputTargets.concat(element)
+            })
+            console.log(_inputSet.length, _inputTargets.length)
+            this.validateInput = tf.tensor2d(_inputSet, [Math.floor((_inputSet.length/(this.windowSize - 1))), this.windowSize -1], 'int32')
+            this.validateTarget = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
+            resolve()
+          })
+        })
       } else {
+        console.log('bruh')
         reject()
       }  
     })
@@ -154,20 +164,19 @@ export class TensorflowService implements OnDestroy {
   train() {
     if (this.Model) {
       this.Model.compile({
-        optimizer: tf.train.adam(0.0001),
+        optimizer: tf.train.adam(0.005),
         loss: tf.losses.meanSquaredError,
-        metrics: ['accuracy']
+        metrics: ['mae']
       })
       console.log('model compiled')
-      this.Model.fit(this.trainSet, this.targetSet, {
+      this.Model.fit(this.inputSet, this.targetSet, {
         epochs: this.epochs,
         batchSize: this.batchSize,
         callbacks: [],
-        // validationData: [this.validateInput, this.validateTarget]
+        validationSplit: 0.7
       })
       .then((info) => {
-        console.log('complete', info)
-        console.log('predict' + this.Model.predict(tf.ones([1, 3])))
+        console.log('training complete', info)
       })
       .catch((err) => {
         console.log(err)
@@ -176,7 +185,7 @@ export class TensorflowService implements OnDestroy {
   }
 
   predict() {
-
+    console.log('predict' + this.Model.predict(tf.tensor2d([87,80,82], [1, 3])))
   }
 
   ngOnDestroy() {
