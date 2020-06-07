@@ -44,6 +44,7 @@ export class SearchbarComponent implements OnInit,OnDestroy {
         keyword: this.searchForm.get('keyword').value,
         year: this.searchForm.get('year').value,
       }).then((res) => {
+
         //save to new observable
         this.sidebarService.saveOriginal(res)
         // parse by week

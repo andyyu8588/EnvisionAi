@@ -10,29 +10,31 @@
 
     <mat-tab-group>
       <mat-tab label="Global">
-        <button mat-button (click) ='changeView()'>
-          change view
-        </button>
         <div *ngIf="!checkLoading()">
-
-
           <div class="container">
+            <div class="row">
+              <div class="col-7"><h1>{{ byDate[0][0].query }}</h1>
+                <mat-slider
+                #matslider
+                [displayWith]="formatLabel"
+                min="0"
+                max="51"
+                [value] = "matslider"
+                (input)='changeDate($event)'
+                >
+                </mat-slider>
+              </div>
 
-            <h1>{{ byDate[0][0].query }}</h1>
-
-
-            <div><h3>{{byDate[sliderIndex][0].date}}</h3></div>
-
-            <mat-slider
-              #matslider
-              [displayWith]="formatLabel"
-              min="0"
-              max="51"
-              [value] = "matslider"
-              (input)='changeDate($event)'
-              >
-            </mat-slider>
+            </div>
+              <div class="col-4"><div><h3>{{byDate[sliderIndex][0].date}}</h3>
+            </div>
           </div>
+          </div>
+
+          <button mat-raised-button (click) ='changeView()'>
+            change view
+          </button>
+
 
 
           <div class="container" *ngIf="viewValue">
@@ -71,11 +73,11 @@
           <span>&times;</span>
         </button>
 
-        <!-- <h1 style="text-align: center;">{{ sentData[0].series[0].query }}</h1> -->
+        <h1 style="text-align: left;">{{ sentData[0].series[0].query }} popularity in {{sentData[0].name}}</h1>
         <button mat-raised-button (click)='onAnalyze()'>
-          Analyze
+          Predict next 3 months
         </button>
-
+        <br>
         <ngx-charts-line-chart
         [view]="view"
         [scheme]="colorScheme"
@@ -93,8 +95,9 @@
         </ngx-charts-line-chart>
       </mat-tab>
     </mat-tab-group>
-    <mat-spinner id="spinner" *ngIf="checkLoading()"></mat-spinner>
-
+    <div id="spinner">
+    <mat-spinner [diameter]="150"*ngIf="checkLoading()"></mat-spinner>
+    </div>
 
   </mat-sidenav>
 
