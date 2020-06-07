@@ -17,7 +17,7 @@ import { Subscription } from 'rxjs';
 })
 export class SidebarComponent implements OnInit, OnDestroy{
   view:any[]=[window.innerWidth*0.50,window.innerHeight*.80]
-  single: any[];
+  single: Array<{[key: string]: any}>;
   viewValue=true
 
   // options
@@ -52,24 +52,31 @@ export class SidebarComponent implements OnInit, OnDestroy{
   private Index: Subscription
 
   changeDate(date){
-    this.single = this.SidebarService.getCountriesData(date.value)
-
+    this.single = this.byDate[this.sliderIndex]
+    this.SidebarService.getCountriesData(date.value)
   }
   changeView(){
     this.viewValue = !this.viewValue
     console.log(this.viewValue)
   }
+
   ngOnInit(): void {
-    this.arraybyDate = this.SidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
-    this.arraybyDate = this.SidebarService.Loading.subscribe((loading) => this.loading = loading)
+    this.arraybyDate = this.SidebarService.byDate.subscribe((byDate) => {
+      this.byDate = byDate
+      this.single = this.byDate[0]
+    })
+    this.isLoading = this.SidebarService.Loading.subscribe((loading) => this.loading = loading)
     this.SidebarService.saveByDate(this.byDate)
 
     this.single = this.byDate[0]
     console.log(this.byDate)
     this.Index = this.SidebarService.sliderIndex.subscribe((sliderIndex) => this.sliderIndex = sliderIndex)
 
-    this.arrayOriginal = this.SidebarService.original.subscribe((original) => this.original = original)
+    this.arrayOriginal = this.SidebarService.original.subscribe((original) => {
+      this.original = original
+    })
     this.SidebarService.saveOriginal(this.original)
+    
     console.log(this.original)
 
   }

@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class SearchbarComponent implements OnInit {
   searchForm: FormGroup
   clicked: boolean = false
-
+  loading: boolean = false
   constructor(private trendsapiService: TrendsapiService,
               private sidebarService: SidebarService) {}
   byDate: any = []
@@ -36,6 +36,7 @@ export class SearchbarComponent implements OnInit {
 
       // use getData to get backend information
       this.sidebarService.setLoading(true)
+      this.loading = true
       this.trendsapiService.getData({
         keyword: this.searchForm.get('keyword').value,
         year: this.searchForm.get('year').value,
@@ -43,9 +44,10 @@ export class SearchbarComponent implements OnInit {
         //save to new observable
         this.sidebarService.saveOriginal(res)
         // parse by week
-        this.sidebarService.parseCountries(res)
         this.arraybyDate = this.sidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
+        this.sidebarService.parseCountries(res)
         this.sidebarService.setLoading(false)
+        this.loading = false
       }).catch((err) => {
         console.log(err)
       })

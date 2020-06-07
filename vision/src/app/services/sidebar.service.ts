@@ -33,7 +33,7 @@ export class SidebarService implements OnDestroy{
   saveOriginal(data):any{
     this._original.next(data)
   }
-  setLoading(data):any{
+  setLoading(data: boolean): any{
     this._Loading.next(data)
   }
   saveByDate(data):any{

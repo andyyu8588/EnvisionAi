@@ -3,6 +3,7 @@ import { TrendsapiService } from './trendsapi.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment.prod';
 import { Injectable, OnDestroy, AfterContentInit } from '@angular/core';
+import * as $ from 'jquery/dist/jquery.min.js';
 import * as tf from '@tensorflow/tfjs'
 
 @Injectable({
@@ -153,17 +154,18 @@ export class TensorflowService implements OnDestroy {
       }  
     })
   }
-
-
+  
   // compile & train the model
   train() {
     if (this.Model) {
       this.Model.compile({
-        optimizer: tf.train.adam(0.005),
+        optimizer: tf.train.adam(0.01),
         loss: tf.losses.meanSquaredError,
         metrics: ['mae']
       })
       console.log('model compiled')
+      $("body").find("*").attr("disabled", "disabled");
+      $("body").find("a").click(function (e) { e.preventDefault(); });
       this.Model.fit(this.inputSet, this.targetSet, {
         epochs: this.epochs,
         batchSize: this.batchSize,
@@ -171,12 +173,16 @@ export class TensorflowService implements OnDestroy {
         validationSplit: 0.6
       })
       .then((info) => {
+        $("body").find("*").removeAttr("disabled");
+        $("body").find("a").unbind("click");
         console.log(info)
         console.log('training complete: mae:', info.history.mae.slice(-1))
         console.log(this.Model.predict(tf.tensor([20, 30, 15], [1, 3])).toString())
         this.predict()
       })
       .catch((err) => {
+        $("body").find("*").removeAttr("disabled");
+        $("body").find("a").unbind("click");
         console.log(err)
       })
     }

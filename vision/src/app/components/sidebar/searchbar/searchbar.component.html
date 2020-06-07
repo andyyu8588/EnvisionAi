@@ -40,7 +40,8 @@
         <button mat-button
         type='button'
         (click)="onSubmit($event)"
-        mat-icon-button> <mat-icon>search</mat-icon></button>
+        mat-icon-button
+        [disabled]='loading'> <mat-icon>search</mat-icon></button>
       </div>
 
     </div>
