@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.legend-items-container {
+  width: 200px;
+}
+.pie-label {
+  font-size: 15px !important;
+}
+.pie-legend .legend-items-container .legend-items .legend-item {
+  display: inherit !important;
+}
+.mat-drawer-inner-container{
+  overflow-x: hidden !important;
+  overflow-y: scroll !important
+}

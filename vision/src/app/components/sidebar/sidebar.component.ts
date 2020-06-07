@@ -4,10 +4,11 @@ import { TensorflowService } from './../../services/tensorflow.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ResizableModule } from 'angular-resizable-element';
 import { TrendsapiService } from './../../services/trendsapi.service';
-import { DataService } from './../../services/data.service'
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
 import { Subscription } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-sidebar',
@@ -15,8 +16,10 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit, OnDestroy{
+  view:any[]=[window.innerWidth*0.50,window.innerHeight*.80]
   single: any[];
-  view: any[] = [240,1500]
+  viewValue=true
+
   // options
   showLegend: boolean = true;
   showLabels: boolean = true;
@@ -34,8 +37,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
     '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF']
   };
 
-  constructor(private DataService: DataService,
-              private SidebarService: SidebarService) {
+  constructor(private SidebarService: SidebarService) {
   }
   byDate: any = []
   private arraybyDate: Subscription
@@ -45,13 +47,15 @@ export class SidebarComponent implements OnInit, OnDestroy{
   changeDate(date){
     this.single = this.SidebarService.getCountriesData(date.value)
   }
-
+  changeView(){
+    this.viewValue = !this.viewValue
+    console.log(this.viewValue)
+  }
   ngOnInit(): void {
     this.arraybyDate = this.SidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
     this.single = this.SidebarService.getCountriesData(0)
-    console.log(this.single)
+    console.log(this.byDate)
     this.Index = this.SidebarService.sliderIndex.subscribe((sliderIndex) => this.sliderIndex = sliderIndex)
-    console.log('index is' + this.sliderIndex)
   }
 
   formatLabel(value: number) {
@@ -60,6 +64,9 @@ export class SidebarComponent implements OnInit, OnDestroy{
     }
 
     return value;
+  }
+  selected(event){
+    console.log(event.name)
   }
   ngOnDestroy(){
     this.Index.unsubscribe()

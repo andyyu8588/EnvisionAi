@@ -1,23 +1,19 @@
 mat-drawer-container {
     height: 100%;
-    max-width: 500px;
+    max-width: 40%;
+    min-width: 600px;
     background-color: rgba(255,255,100, $alpha: 0);
-    overflow: hidden;
 }
 
-mat-drawer-inner-container{
-    overflow: hidden;
+
+.col-6{
+  padding: 0 0 0 0;
 }
 
-ngx-charts-pie-grid {
-    left: 2%;
-    width: 240 px;
-    height: 1000 px;
+.container-fluid{
+  padding-left: 5px;
+  padding-right: 0px;
 }
-
-.inner{
-}
-
 .outer{
   height: 95%;
   position: relative;
@@ -34,6 +30,10 @@ ngx-charts-pie-grid {
     top: 0px;
     left: 0px;
 }
+h3{
+  left: 5px;
+  text-align: left;
+}
 
 mat-slider {
     top: 2%;
@@ -43,6 +43,11 @@ mat-slider {
     position: sticky;
 }
 
-body {
-    overflow: hidden;
+.pie-chart-container {
+  height: 600px;
+  min-width: 600px;
+}
+
+.pie-label{
+  font-size: 14;
 }

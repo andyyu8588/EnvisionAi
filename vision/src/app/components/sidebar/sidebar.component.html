@@ -1,38 +1,62 @@
 
-    <mat-drawer-container class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
+    <mat-drawer-container [hidden]='!drawer.opened' autosize>
 
       <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
             <span>&times;</span>
         </button>
         <app-searchbar class=""></app-searchbar>
+        <button mat-button (click) ='changeView()'>
+          change view
+        </button>
 
-        <div class="row outer">
-
-        <div class="col-6 inner">
-          <ngx-charts-pie-grid class
+        <div class="container" *ngIf="viewValue">
+          <ngx-charts-pie-chart class
             [view]="view"
             [scheme]="colorScheme"
-            [results]="single">
-        </ngx-charts-pie-grid>
+            [results]="single"
+            labels='true'
+            doughnut='true'
+            legend='true'
+            legendTitle='countries'
+            (select)='selected($event)'
+            >
 
-
-        <mat-slider
-          #matslider
-          [displayWith]="formatLabel"
-          min="0"
-          max="51"
-          [value] = "matslider"
-          (input)='changeDate($event)'
-          >
-        </mat-slider>
-        <span >{{sliderIndex}}</span>
-
+          </ngx-charts-pie-chart>
         </div>
-        <div class="col-6">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum vel ipsam a corrupti perferendis, perspiciatis recusandae obcaecati cumque iusto doloremque voluptatum architecto exercitationem eveniet commodi rem provident animi at!</p>
+
+        <div class="container" *ngIf="!viewValue">
+          <ngx-charts-bar-vertical class
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="single"
+            legend='true'
+            legendTitle='countries'
+            xAxis='true'
+            yAxies='false'
+            showXAxisLabel='true'
+            showYAxisLabel='true'
+            (select)='selected($event)'>
+
+          </ngx-charts-bar-vertical>
         </div>
-      </div>
+
+
+
+
+        <div class="container">
+          <div><h3>{{byDate[sliderIndex][0].date}}</h3></div>
+
+          <mat-slider
+            #matslider
+            [displayWith]="formatLabel"
+            min="0"
+            max="51"
+            [value] = "matslider"
+            (input)='changeDate($event)'
+            >
+          </mat-slider>
+        </div>
 
     </mat-sidenav>
 

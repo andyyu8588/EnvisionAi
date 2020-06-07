@@ -49,6 +49,9 @@ import { MapComponent } from './components/map/map.component';
 import { SearchbarComponent } from './components/sidebar/searchbar/searchbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
+
 
 @NgModule({
   declarations: [
@@ -104,7 +107,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgxChartsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

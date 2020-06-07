@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.0.1",
     "@angular/platform-browser-dynamic": "~9.0.1",
     "@angular/router": "~9.0.1",
+    "@progress/kendo-angular-buttons": "^5.4.2",
     "@swimlane/ngx-charts": "^14.0.0",
     "@tensorflow/tfjs": "^2.0.0",
     "@types/mapbox-gl": "^1.10.2",
@@ -31,7 +32,12 @@
     "mapbox-gl": "^1.10.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@progress/kendo-angular-l10n": "^2.0.0",
+    "@progress/kendo-angular-popup": "^3.0.0",
+    "@progress/kendo-angular-common": "^1.0.0",
+    "@angular/localize": "~9.0.1",
+    "@progress/kendo-theme-default": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.901.7",
