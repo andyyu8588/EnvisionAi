@@ -8,7 +8,7 @@ export const environment = {
   backend: {
     trendsapi: 'http://localhost:3000/search',
     Tfmodel: 'http://localhost:3000/Tfmodel',
-    DenseModel: 'http://envisionai.tech/densemodel/model.json'
+    DenseModel: 'http://www.envisionai.tech/densemodel/model.json'
   },
 
   mapbox: {

@@ -56,7 +56,7 @@ export class TensorflowService implements OnDestroy {
 
   loadModel() {
     // import keras model from backend w/o weights
-    tf.loadLayersModel(environment.backend.Tfmodel, {strict:false})
+    tf.loadLayersModel(environment.backend.DenseModel, {strict:false})
     .then((layerModel) => {
       console.log('model imported successfully')
       this.Model = layerModel
