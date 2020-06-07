@@ -24,8 +24,8 @@ app.use('/search', trendsapiRoute)
 app.use('/home', TestRoute)
 
 // serve angular
-// app.use((req, res, next) => {
-//   res.sendFile(express.static(path.resolve(__dirname, '..', 'dist')))
-// })
+app.use((req, res, next) => {
+  res.sendFile(express.static(path.resolve(__dirname, '..', '..', 'vision', 'dist', 'vision', 'index.html')))
+})
 
 module.exports = app
