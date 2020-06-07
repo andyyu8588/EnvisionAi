@@ -4,7 +4,7 @@
         <!-- keyword -->
         <mat-form-field class="col-6">
             <mat-label class="">Search for a trend</mat-label>
-            <input matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">              
+            <input #checked matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">
         </mat-form-field>
 
         <!-- year -->
@@ -29,9 +29,9 @@
                 <mat-option value="2019">2019</mat-option>
                 <mat-option value="2020">2020</mat-option>
             </mat-select>
-        </mat-form-field>       
+        </mat-form-field>
 
         <!-- submit button -->
         <img class="col-2" src="assets/img/logo.png" (click)="onSubmit($event)">
-    </div>   
+    </div>
 </form>

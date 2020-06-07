@@ -22,8 +22,9 @@ export class SidebarService implements OnDestroy{
     for (var i = 0; i< (_countries.data)[0].data.length; i++){
      let parsedDay = [];
       (_countries.data).forEach(country => {
+        if ((country.data)[i] && (country.data)[i].name !='Global'){
         parsedDay.push((country.data)[i])
-        });
+        }});
         parsedData.push(parsedDay)
 
       }
