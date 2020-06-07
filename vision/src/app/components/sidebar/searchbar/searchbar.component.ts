@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SidebarService } from  './../../../services/sidebar.service'
 import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
@@ -58,7 +59,7 @@ export class SearchbarComponent implements OnInit {
         // this.searchForm.patchValue({
         //   keyword: 'Must envision something!'
         // })
-      }      
-    }    
+      }
+    }
   }
 }

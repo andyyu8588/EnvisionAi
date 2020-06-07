@@ -12,7 +12,7 @@ export class SidebarService implements OnDestroy{
   public countries: Observable<any> = this._countries.asObservable()
 
   private byDateArray: Array<CountriesModel> = []
-  private _byDate: BehaviorSubject<any> = new BehaviorSubject(this.byDateArray)
+  public _byDate: BehaviorSubject<any> = new BehaviorSubject(this.byDateArray)
   public byDate: Observable<any> = this._byDate.asObservable()
   constructor(){}
 
@@ -22,7 +22,7 @@ export class SidebarService implements OnDestroy{
     for (var i = 0; i< (_countries.data)[0].data.length; i++){
      let parsedDay = [];
       (_countries.data).forEach(country => {
-        if ((country.data)[i] && (country.data)[i].name !='Global'){
+        if ((country.data)[i] && (country.data)[i].name !='Global' && (country.data)[i].value){
         parsedDay.push((country.data)[i])
         }});
         parsedData.push(parsedDay)
