@@ -4,6 +4,7 @@ const path = require('path')
 
 // routes 
 const TfmodelRoute = require('./routes/Tfmodel')
+const denseRoute = require('./routes/densemodel')
 const trendsapiRoute = require('./routes/trendsapi')
 const TestRoute = require('./routes/testroute')
 
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/Tfmodel', TfmodelRoute)
+app.use('/densemodel', denseRoute)
 app.use('/search', trendsapiRoute)
 app.use('/home', TestRoute)
 
