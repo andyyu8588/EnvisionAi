@@ -6,7 +6,6 @@ import { ResizableModule } from 'angular-resizable-element';
 import { TrendsapiService } from './../../services/trendsapi.service';
 import { DataService } from './../../services/data.service'
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { defaultData } from './default'
 import { SidebarService } from 'src/app/services/sidebar.service';
 import { Subscription } from 'rxjs';
 
@@ -44,16 +43,15 @@ export class SidebarComponent implements OnInit, OnDestroy{
   private Index: Subscription
 
   changeDate(date){
-    this.single = this.DataService.getData(date.value)
+    this.single = this.SidebarService.getCountriesData(date.value)
   }
 
   ngOnInit(): void {
     this.arraybyDate = this.SidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
-    this.byDate = defaultData;
-    this.SidebarService._byDate.next(this.byDate)
-    this.single = this.DataService.getData(0)
-
+    this.single = this.SidebarService.getCountriesData(0)
+    console.log(this.single)
     this.Index = this.SidebarService.sliderIndex.subscribe((sliderIndex) => this.sliderIndex = sliderIndex)
+    console.log('index is' + this.sliderIndex)
   }
 
   formatLabel(value: number) {

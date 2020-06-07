@@ -1,21 +1,21 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { CountriesModel } from './../components/sidebar/countries.model'
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-
+import { defaultData } from './default'
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService implements OnDestroy{
 
-  private byDateArray: Array<CountriesModel> = []
-  public _byDate: BehaviorSubject<any> = new BehaviorSubject(this.byDateArray)
+  private byDateArray: Array<any> = defaultData
+  private _byDate: BehaviorSubject<any> = new BehaviorSubject(this.byDateArray)
   public byDate: Observable<any> = this._byDate.asObservable()
   constructor(){}
 
   private Index: number
-  public _sliderIndex: BehaviorSubject<any> = new BehaviorSubject(this.Index)
-  public sliderIndex: Observable<any> = this._byDate.asObservable()
+  private _sliderIndex: BehaviorSubject<any> = new BehaviorSubject(this.Index)
+  public sliderIndex: Observable<any> = this._sliderIndex.asObservable()
 
   parseCountries(_countries):any{
     let parsedData = [];
@@ -31,9 +31,12 @@ export class SidebarService implements OnDestroy{
     console.log(parsedData)
     this._byDate.next(parsedData)
     }
-  getCountriesData(_byDate, index ):any{
+  getCountriesData(index):any{
+        /*
+    gets data by indexing with week of the year
+    */
     this._sliderIndex.next(index)
-    return _byDate[index]
+    return (this.byDateArray)[index]
   }
 
   ngOnDestroy() {
