@@ -20,7 +20,7 @@ export class TensorflowService implements OnDestroy {
   public presentData: {[key: string]: any}
 
   // data from selected country
-  selectedData: number[] =[61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
+  selectedData: number[] = [61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
 
   // training parameters
   epochs: number = 45
@@ -43,6 +43,16 @@ export class TensorflowService implements OnDestroy {
       // this.train()
     })
   }
+
+  inputValues(values: any) {
+    return new Promise((resolve, reject) => {
+      this.selectedData = []
+      values[0].series.forEach((week) => {
+        this.selectedData.push(week.value)
+      })
+      resolve(this.selectedData)
+    }) 
+  } 
 
   loadModel() {
     // import keras model from backend w/o weights
@@ -177,7 +187,7 @@ export class TensorflowService implements OnDestroy {
         console.log(info)
         console.log('training complete: mae:', info.history.mae.slice(-1))
         console.log(this.Model.predict(tf.tensor([20, 30, 15], [1, 3])).toString())
-        // this.predict()
+        return this.predict()
       })
       .catch((err) => {
         $("body").find("*").removeAttr("disabled");
@@ -198,7 +208,7 @@ export class TensorflowService implements OnDestroy {
       x_axis.push(parseFloat(ok))
       x_axis.shift()
     }
-    console.log('predict 6month:' + predictions)
+    return predictions
   }
 
   ngOnDestroy() {
