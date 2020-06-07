@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class SearchbarComponent implements OnInit {
   searchForm: FormGroup
+  clicked: boolean = false
 
   constructor(private trendsapiService: TrendsapiService,
               private sidebarService: SidebarService) {}
@@ -19,7 +20,7 @@ export class SearchbarComponent implements OnInit {
   ngOnInit(): void {
     this.searchForm = new FormGroup({
       'keyword': new FormControl(null, Validators.required),
-      'year': new FormControl(null, Validators.required)
+      'year': new FormControl(null, Validators.required),
     })
   }
 
@@ -27,6 +28,7 @@ export class SearchbarComponent implements OnInit {
   onSubmit(event) {
     // stop page refresh
     event.preventDefault()
+    this.clicked = true
 
     // check if form is complete
     if (this.searchForm.valid) {
@@ -46,16 +48,16 @@ export class SearchbarComponent implements OnInit {
     } else {
       // look for invalid year
       if (!this.searchForm.get('year').valid) {
-        this.searchForm.patchValue({
-          keyword: 'Must envision a year!'
-        })
+        // this.searchForm.patchValue({
+        //   keyword: 'Must envision a year!'
+        // })
       }
 
       // look for invalid keyword
       if (!this.searchForm.get('keyword').valid) {
-        this.searchForm.patchValue({
-          keyword: 'Must envision something!'
-        })
+        // this.searchForm.patchValue({
+        //   keyword: 'Must envision something!'
+        // })
       }      
     }    
   }
