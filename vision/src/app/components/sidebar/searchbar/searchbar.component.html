@@ -4,6 +4,7 @@
         <!-- keyword -->
         <mat-form-field class="col-6">
             <mat-label class="">Search for a trend</mat-label>
+            <input #checked matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">
             <input matInput class="" formControlName="keyword" id="seachInput" type="text" placeholder="ex: #BLM" aria-placeholder="ex: #BLM">
             <small id="passwordHelpBlock" class="text-danger" *ngIf="!searchForm.get('keyword').valid && clicked">Must Envision a trend!</small>
         </mat-form-field>
@@ -31,9 +32,9 @@
                 <mat-option value="2020">2020</mat-option>
             </mat-select>
             <small id="passwordHelpBlock" class="text-danger" *ngIf="!searchForm.get('year').valid && clicked">Must Envision a year!</small>
-        </mat-form-field>       
+        </mat-form-field>
 
         <!-- submit button -->
         <img class="col-2 img" src="assets/img/logo.png" (click)="onSubmit($event)">
-    </div>   
+    </div>
 </form>
