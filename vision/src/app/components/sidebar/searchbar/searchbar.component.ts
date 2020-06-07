@@ -1,5 +1,5 @@
 import { TrendsapiService } from './../../../services/trendsapi.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SidebarService } from  './../../../services/sidebar.service'
 import { Subscription } from 'rxjs';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchbarComponent implements OnInit,OnDestroy {
   searchForm: FormGroup
   clicked: boolean = false
   loading: boolean = false
@@ -23,6 +23,9 @@ export class SearchbarComponent implements OnInit {
       'keyword': new FormControl(null, Validators.required),
       'year': new FormControl(null, Validators.required),
     })
+  }
+  ngOnDestroy(){
+    this.arraybyDate.unsubscribe()
   }
 
   // search is performed either by button or enter
