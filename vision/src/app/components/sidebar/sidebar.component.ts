@@ -131,7 +131,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
       series: []
     }]
     
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < sampleData.length; i++) {
       let week = 51 + i + 1
       predictedData[0].series.push({
         name: week.toString(),

@@ -23,13 +23,13 @@ export class TensorflowService implements OnDestroy {
   selectedData: number[] = [61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
 
   // training parameters
-  epochs: number = 45
+  epochs: number = 28
   split: number = Math.floor(this.selectedData.length*1)
   windowSize: number = 4
-  batchSize: number = 2
+  batchSize: number = 3
 
   // finished dataset
-  // trainSet = [tf.ones([2,3])]
+  // trainSet = [tf.ones([2,2])]
   // targetSet = [tf.ones([2,1])]
   inputSet: tf.Tensor
   targetSet: tf.Tensor
@@ -56,16 +56,16 @@ export class TensorflowService implements OnDestroy {
 
   loadModel() {
     // import keras model from backend w/o weights
-    tf.loadLayersModel(environment.backend.DenseModel, {strict:false})
+    tf.loadLayersModel(environment.backend.Tfmodel, {strict:false})
     .then((layerModel) => {
       console.log('model imported successfully')
       this.Model = layerModel
-      // this.createDataset()
-      // .then(() => {
+      this.createDataset()
+      .then(() => {
       //   console.log(this.inputSet)
       //   console.log(this.targetSet)
-      //   this.train()
-      // })
+        this.train()
+      })
       // .catch(() => {
       //   console.log('dfda')
       // })
@@ -168,9 +168,9 @@ export class TensorflowService implements OnDestroy {
   train() {
     if (this.Model) {
       this.Model.compile({
-        optimizer: tf.train.adam(0.01),
-        loss: tf.losses.meanSquaredError,
-        metrics: ['mae']
+        optimizer: tf.train.adam(0.001),
+        loss: tf.losses.huberLoss,
+        metrics: ['mse']
       })
       console.log('model compiled')
       $("body").find("*").attr("disabled", "disabled");
@@ -185,8 +185,8 @@ export class TensorflowService implements OnDestroy {
         $("body").find("*").removeAttr("disabled");
         $("body").find("a").unbind("click");
         console.log(info)
-        console.log('training complete: mae:', info.history.mae.slice(-1))
-        console.log(this.Model.predict(tf.tensor([20, 30, 15], [1, 3])).toString())
+        console.log('training complete: mae:', info.history.mse.slice(-1))
+        console.log(this.Model.predict(tf.tensor([12])).toString())
         return this.predict()
       })
       .catch((err) => {
@@ -198,16 +198,15 @@ export class TensorflowService implements OnDestroy {
   }
 
   predict() {
-    let x_axis: number[] = this.selectedData.slice(-3)
+    let x_axis: number = this.selectedData.slice(-1)[0]
     let predictions: any[] = []
     for (let x=0; x<6; x++) {
-      console.log(x_axis)
-      let pred = this.Model.predict(tf.tensor(x_axis, [1, 3]))
+      let pred = this.Model.predict(tf.tensor(x_axis, [1,1]))
       let ok = pred.toString().substring(14, pred.toString().length - 4)
       predictions.push(parseFloat(ok))
-      x_axis.push(parseFloat(ok))
-      x_axis.shift()
+      x_axis = parseFloat(ok)
     }
+    console.log(predictions)
     return predictions
   }
 

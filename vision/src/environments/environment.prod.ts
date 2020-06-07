@@ -3,7 +3,7 @@ export const environment = {
 
   backend: {
     Tfmodel: 'http://localhost:3000/Tfmodel/model.json',
-    DenseModel: 'http://www.envisionai.tech/densemodel/model.json'
+    DenseModel: 'http://localhost:3000/densemodel/model.json'
   },
 
   mapbox: {
