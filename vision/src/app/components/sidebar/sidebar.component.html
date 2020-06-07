@@ -1,16 +1,18 @@
 
-    <mat-drawer-container [hidden]='!drawer.opened' autosize>
+<mat-drawer-container [hidden]='!drawer.opened' autosize>
 
-      <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
-        <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
-            <span>&times;</span>
-        </button>
-        <app-searchbar class=""></app-searchbar>
-        <hr>
+  <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
+    <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
+        <span>&times;</span>
+    </button>
+    <app-searchbar class=""></app-searchbar>
+    <!-- <hr> -->
+
+    <mat-tab-group>
+      <mat-tab label="One">
         <button mat-button (click) ='changeView()'>
           change view
         </button>
-        <mat-spinner id="spinner" *ngIf="checkLoading()"></mat-spinner>
         <div *ngIf="!checkLoading()">
 
           <div class="container">
@@ -28,45 +30,69 @@
           </div>
 
 
-        <div class="container" *ngIf="viewValue">
-          <ngx-charts-pie-chart class
-            [view]="view"
-            [scheme]="colorScheme"
-            [results]="single"
-            labels='true'
-            doughnut='true'
-            legend='true'
-            legendTitle='countries'
-            (select)='selected($event)'
-            >
+          <div class="container" *ngIf="viewValue">
+            <ngx-charts-pie-chart class
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="single"
+              labels='true'
+              doughnut='true'
+              legend='true'
+              legendTitle='countries'
+              (select)='selected($event)'
+              >
 
-          </ngx-charts-pie-chart>
+            </ngx-charts-pie-chart>
+          </div>
+
+          <div class="container" *ngIf="!viewValue">
+            <ngx-charts-bar-vertical class
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="single"
+              legend='true'
+              legendTitle='countries'
+              xAxis='true'
+              yAxies='false'
+              showXAxisLabel='true'
+              showYAxisLabel='true'
+              (select)='selected($event)'>
+            </ngx-charts-bar-vertical>
+          </div>
         </div>
+      </mat-tab>
+      <mat-tab label="Two">
+        <!-- <ngx-charts-line-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [legend]="legend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [timeline]="timeline"
+        [results]="multi"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+        >
 
-        <div class="container" *ngIf="!viewValue">
-          <ngx-charts-bar-vertical class
-            [view]="view"
-            [scheme]="colorScheme"
-            [results]="single"
-            legend='true'
-            legendTitle='countries'
-            xAxis='true'
-            yAxies='false'
-            showXAxisLabel='true'
-            showYAxisLabel='true'
-            (select)='selected($event)'>
-          </ngx-charts-bar-vertical>
-        </div>
-      </div>
+        </ngx-charts-line-chart> -->
+      </mat-tab>
+    </mat-tab-group>
+    <mat-spinner id="spinner" *ngIf="checkLoading()"></mat-spinner>
+    
 
-    </mat-sidenav>
+  </mat-sidenav>
 
-  </mat-drawer-container>
+</mat-drawer-container>
 
-  <div id="openBtn">
-      <button type="button" mat-raised-button (click)="drawer.toggle()">
-      Open Sidebar
-      </button>
-  </div>
+<div id="openBtn">
+  <button type="button" mat-raised-button (click)="drawer.toggle()">
+    Open Sidebar
+  </button>
+</div>
 
 
