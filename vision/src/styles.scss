@@ -14,5 +14,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .mat-drawer-inner-container{
   overflow-x: hidden !important;
-  overflow-y: scroll !important
+  overflow-y: auto !important
 }
+

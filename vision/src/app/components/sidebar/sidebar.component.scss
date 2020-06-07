@@ -4,11 +4,11 @@ mat-drawer-container {
     min-width: 600px;
     background-color: rgba(255,255,100, $alpha: 0);
 }
-
 #spinner{
-  height: max-content;
-  width: max-content;
+  text-align: center;
 }
+
+
 .col-6{
   padding: 0 0 0 0;
 }
@@ -38,12 +38,9 @@ h3{
   text-align: left;
 }
 
-mat-slider {
-    top: 2%;
-    left: 4%;
-    right: 4%;
-    width: 100%;
-    position: sticky;
+.mat-progress-spinner circle, .mat-spinner circle{
+  height: max-content;
+  width: max-content;
 }
 
 .pie-chart-container {

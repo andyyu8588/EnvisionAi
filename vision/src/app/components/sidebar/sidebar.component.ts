@@ -17,7 +17,7 @@ import { Subscription } from 'rxjs';
 })
 export class SidebarComponent implements OnInit, OnDestroy{
   select = false
-  view:any[]=[window.innerWidth*0.50,window.innerHeight*.80]
+  view:any[]=[window.innerWidth*0.37,window.innerHeight*.70]
   single: Array<{[key: string]: any}>;
   data: Array<{[key: string]: any}>;
   viewValue=true
