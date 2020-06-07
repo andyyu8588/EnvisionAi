@@ -20,11 +20,12 @@ export class TensorflowService implements OnDestroy {
   public presentData: {[key: string]: any}
 
   // data from selected country
-  selectedData: number[] = [61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
+  selectedData: number[]
+  // [61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
 
   // training parameters
-  epochs: number = 28
-  split: number = Math.floor(this.selectedData.length*1)
+  epochs: number = 27
+  split: number = Math.floor(52)
   windowSize: number = 4
   batchSize: number = 3
 
@@ -60,12 +61,12 @@ export class TensorflowService implements OnDestroy {
     .then((layerModel) => {
       console.log('model imported successfully')
       this.Model = layerModel
-      this.createDataset()
-      .then(() => {
+      // this.createDataset()
+      // .then(() => {
       //   console.log(this.inputSet)
       //   console.log(this.targetSet)
-        this.train()
-      })
+        // this.train()
+      // })
       // .catch(() => {
       //   console.log('dfda')
       // })
@@ -186,7 +187,7 @@ export class TensorflowService implements OnDestroy {
         $("body").find("a").unbind("click");
         console.log(info)
         console.log('training complete: mae:', info.history.mse.slice(-1))
-        console.log(this.Model.predict(tf.tensor([12])).toString())
+        // console.log(this.Model.predict(tf.tensor([12])).toString())
         return this.predict()
       })
       .catch((err) => {
