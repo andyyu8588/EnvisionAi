@@ -16,8 +16,10 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit, OnDestroy{
+  select = false
   view:any[]=[window.innerWidth*0.50,window.innerHeight*.80]
   single: Array<{[key: string]: any}>;
+  data: Array<{[key: string]: any}>;
   viewValue=true
 
   // options
@@ -79,7 +81,10 @@ export class SidebarComponent implements OnInit, OnDestroy{
     })
     this.SidebarService.saveOriginal(this.original)
 
-    this.dataSent= this.SidebarService.sentData.subscribe((sentData) => this.sentData = sentData)
+    this.dataSent= this.SidebarService.sentData.subscribe((sentData) =>{
+      this.sentData = sentData
+      this.data = this.sentData
+    })
     console.log(this.original)
 
   }
@@ -91,9 +96,12 @@ export class SidebarComponent implements OnInit, OnDestroy{
 
     return value;
   }
-
-  selected(event) {
-    if (typeof(event) == "string") {
+  changeSelect(){
+    this.select = false
+  }
+  selected(event){
+    this. select = true
+    if (typeof(event)=="string"){
       this.SidebarService.parseSendData(event)
     }
     else {

@@ -61,29 +61,30 @@
           </div>
         </div>
       </mat-tab>
-      <mat-tab label="Two">
-        <!-- <ngx-charts-line-chart
+      <mat-tab label="Two" *ngIf="select">
+        <button  mat-button label='close' (click)="changeSelect()">
+          <span>&times;</span>
+        </button>
+
+        <ngx-charts-line-chart
         [view]="view"
         [scheme]="colorScheme"
-        [legend]="legend"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [xAxis]="xAxis"
-        [yAxis]="yAxis"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel"
-        [timeline]="timeline"
-        [results]="multi"
-        (select)="onSelect($event)"
-        (activate)="onActivate($event)"
-        (deactivate)="onDeactivate($event)"
+        [results] = "data"
+        legend= "true"
+        showXAxisLabel="true"
+        showYAxisLabel="true"
+        xAxis="popularity"
+        yAxis="time(weeks)"
+        xAxisLabel="true"
+        yAxisLabel="true"
+        timeline="true"
         >
 
-        </ngx-charts-line-chart> -->
+        </ngx-charts-line-chart>
       </mat-tab>
     </mat-tab-group>
     <mat-spinner id="spinner" *ngIf="checkLoading()"></mat-spinner>
-    
+
 
   </mat-sidenav>
 
