@@ -48,8 +48,11 @@ export class SidebarComponent implements OnInit, OnDestroy{
   loading: boolean
   private isLoading:Subscription
 
-  sliderIndex: number
+  sliderIndex: number = 0
   private Index: Subscription
+
+  sentData: any = []
+  private dataSent: Subscription
 
   changeDate(date){
     this.single = this.byDate[this.sliderIndex]
@@ -69,14 +72,14 @@ export class SidebarComponent implements OnInit, OnDestroy{
     this.SidebarService.saveByDate(this.byDate)
 
     this.single = this.byDate[0]
-    console.log(this.byDate)
     this.Index = this.SidebarService.sliderIndex.subscribe((sliderIndex) => this.sliderIndex = sliderIndex)
 
     this.arrayOriginal = this.SidebarService.original.subscribe((original) => {
       this.original = original
     })
     this.SidebarService.saveOriginal(this.original)
-    
+
+    this.dataSent= this.SidebarService.sentData.subscribe((sentData) => this.sentData = sentData)
     console.log(this.original)
 
   }
@@ -89,7 +92,12 @@ export class SidebarComponent implements OnInit, OnDestroy{
     return value;
   }
   selected(event){
-    console.log(event.name)
+    if (typeof(event)=="string"){
+      this.SidebarService.parseSendData(event)
+    }
+    else{
+      this.SidebarService.parseSendData(event.name)
+    }
   }
   checkLoading(){
     return this.loading
@@ -99,6 +107,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
     this.arraybyDate.unsubscribe()
     this.arrayOriginal.unsubscribe()
     this.isLoading.unsubscribe()
+    this.dataSent.unsubscribe()
 
   }
 

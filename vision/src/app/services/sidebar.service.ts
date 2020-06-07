@@ -21,7 +21,7 @@ export class SidebarService implements OnDestroy{
   private _sentData: BehaviorSubject<any> = new BehaviorSubject(this.sendData)
   public sentData: Observable<any> = this._sentData.asObservable()
 
-  private Index: number
+  private Index: number = 0
   private _sliderIndex: BehaviorSubject<any> = new BehaviorSubject(this.Index)
   public sliderIndex: Observable<any> = this._sliderIndex.asObservable()
 
@@ -39,7 +39,17 @@ export class SidebarService implements OnDestroy{
   saveByDate(data):any{
     this._byDate.next(data)
   }
-  parseSendData(country){
+  parseSendData(event){
+    let analysis = [];
+    this._original.value.forEach(country => {
+      if (country.country == event){
+          country.data.forEach(week => {
+            analysis.push(week)
+          })
+      }
+
+    });
+    this._sentData.next(analysis)
   }
 
   parseCountries(_countries):any{
@@ -54,7 +64,6 @@ export class SidebarService implements OnDestroy{
 
       }
     this._byDate.next(parsedData)
-    console.log(this.byDate)
     }
   // parseCases()
   getCountriesData(index):any{

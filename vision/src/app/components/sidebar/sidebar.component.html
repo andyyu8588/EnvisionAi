@@ -6,11 +6,28 @@
             <span>&times;</span>
         </button>
         <app-searchbar class=""></app-searchbar>
+        <hr>
         <button mat-button (click) ='changeView()'>
           change view
         </button>
-        <mat-spinner *ngIf="checkLoading()"></mat-spinner>
+        <mat-spinner id="spinner" *ngIf="checkLoading()"></mat-spinner>
         <div *ngIf="!checkLoading()">
+
+          <div class="container">
+            <div><h3>{{byDate[sliderIndex][0].date}}</h3></div>
+
+            <mat-slider
+              #matslider
+              [displayWith]="formatLabel"
+              min="0"
+              max="51"
+              [value] = "matslider"
+              (input)='changeDate($event)'
+              >
+            </mat-slider>
+          </div>
+
+
         <div class="container" *ngIf="viewValue">
           <ngx-charts-pie-chart class
             [view]="view"
@@ -38,25 +55,7 @@
             showXAxisLabel='true'
             showYAxisLabel='true'
             (select)='selected($event)'>
-
           </ngx-charts-bar-vertical>
-        </div>
-
-
-
-
-        <div class="container">
-          <!-- <div><h3>{{[byDate.value][sliderIndex][0].date}}</h3></div> -->
-
-          <mat-slider
-            #matslider
-            [displayWith]="formatLabel"
-            min="0"
-            max="51"
-            [value] = "matslider"
-            (input)='changeDate($event)'
-            >
-          </mat-slider>
         </div>
       </div>
 
