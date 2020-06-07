@@ -38,6 +38,7 @@ export class SidebarService implements OnDestroy{
 
   ngOnDestroy() {
     this._byDate.unsubscribe()
+    this._sliderIndex.unsubscribe()
   }
 
 }
