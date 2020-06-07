@@ -41,11 +41,19 @@ export class SidebarComponent implements OnInit, OnDestroy{
   }
   byDate: any = []
   private arraybyDate: Subscription
+
+  original:any = []
+  private arrayOriginal:Subscription
+
+  loading: boolean
+  private isLoading:Subscription
+
   sliderIndex: number
   private Index: Subscription
 
   changeDate(date){
     this.single = this.SidebarService.getCountriesData(date.value)
+
   }
   changeView(){
     this.viewValue = !this.viewValue
@@ -53,9 +61,17 @@ export class SidebarComponent implements OnInit, OnDestroy{
   }
   ngOnInit(): void {
     this.arraybyDate = this.SidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
-    this.single = this.SidebarService.getCountriesData(0)
+    this.arraybyDate = this.SidebarService.Loading.subscribe((loading) => this.loading = loading)
+    this.SidebarService.saveByDate(this.byDate)
+
+    this.single = this.byDate[0]
     console.log(this.byDate)
     this.Index = this.SidebarService.sliderIndex.subscribe((sliderIndex) => this.sliderIndex = sliderIndex)
+
+    this.arrayOriginal = this.SidebarService.original.subscribe((original) => this.original = original)
+    this.SidebarService.saveOriginal(this.original)
+    console.log(this.original)
+
   }
 
   formatLabel(value: number) {
@@ -68,9 +84,14 @@ export class SidebarComponent implements OnInit, OnDestroy{
   selected(event){
     console.log(event.name)
   }
+  checkLoading(){
+    return this.loading
+  }
   ngOnDestroy(){
     this.Index.unsubscribe()
     this.arraybyDate.unsubscribe()
+    this.arrayOriginal.unsubscribe()
+    this.isLoading.unsubscribe()
 
   }
 

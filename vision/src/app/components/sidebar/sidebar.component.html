@@ -9,7 +9,8 @@
         <button mat-button (click) ='changeView()'>
           change view
         </button>
-
+        <mat-spinner *ngIf="checkLoading()"></mat-spinner>
+        <div *ngIf="!checkLoading()">
         <div class="container" *ngIf="viewValue">
           <ngx-charts-pie-chart class
             [view]="view"
@@ -45,7 +46,7 @@
 
 
         <div class="container">
-          <div><h3>{{byDate[sliderIndex][0].date}}</h3></div>
+          <!-- <div><h3>{{[byDate.value][sliderIndex][0].date}}</h3></div> -->
 
           <mat-slider
             #matslider
@@ -57,6 +58,7 @@
             >
           </mat-slider>
         </div>
+      </div>
 
     </mat-sidenav>
 

@@ -35,14 +35,17 @@ export class SearchbarComponent implements OnInit {
     if (this.searchForm.valid) {
 
       // use getData to get backend information
+      this.sidebarService.setLoading(true)
       this.trendsapiService.getData({
         keyword: this.searchForm.get('keyword').value,
         year: this.searchForm.get('year').value,
       }).then((res) => {
-
+        //save to new observable
+        this.sidebarService.saveOriginal(res)
         // parse by week
         this.sidebarService.parseCountries(res)
         this.arraybyDate = this.sidebarService.byDate.subscribe((byDate) => this.byDate = byDate)
+        this.sidebarService.setLoading(false)
       }).catch((err) => {
         console.log(err)
       })
