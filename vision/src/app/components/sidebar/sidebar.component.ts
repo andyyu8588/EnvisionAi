@@ -124,29 +124,41 @@ export class SidebarComponent implements OnInit, OnDestroy{
   }
 
   onAnalyze() {
-    let sampleData = [10, 20, 15]
+    let values = []
 
-    let predictedData = [{
-      name: 'CA',
-      series: []
-    }]
-    
-    for (let i = 0; i < sampleData.length; i++) {
-      let week = 51 + i + 1
-      predictedData[0].series.push({
-        name: week.toString(),
-        value: sampleData[i]
-      })
-    }
+    this.sentData[0].series.forEach((element) => {
+      values.push(element.value)
+    })
 
-    this.sentData[0].series.reverse()
+    this.tensorflowService.inputValues(values).then((done) => {
+      this.tensorflowService.createDataset().then((res) => {
+        this.tensorflowService.train().then((values2) => {
+          let sampleData = values2
 
-    this.sentData[0].series.forEach(element => {
-      predictedData[0].series.unshift(element)
-    });
+          let predictedData = [{
+            name: 'CA',
+            series: []
+          }]
+          
+          for (let i = 0; i < sampleData.length; i++) {
+            let week = 51 + i + 1
+            predictedData[0].series.push({
+              name: week.toString(),
+              value: sampleData[i]
+            })
+          }
 
-    console.log(predictedData)
+          this.sentData[0].series.reverse()
 
-    this.SidebarService._sentData.next(predictedData)
+          this.sentData[0].series.forEach(element => {
+            predictedData[0].series.unshift(element)
+          });
+
+          console.log(predictedData)
+
+          this.SidebarService._sentData.next(predictedData)
+        })
+    })
+    })
   }
 }

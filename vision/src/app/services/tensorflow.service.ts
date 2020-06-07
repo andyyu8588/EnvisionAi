@@ -46,10 +46,11 @@ export class TensorflowService implements OnDestroy {
   }
 
   inputValues(values: any) {
+    console.log(this.selectedData)
     return new Promise((resolve, reject) => {
       this.selectedData = []
-      values[0].series.forEach((week) => {
-        this.selectedData.push(week.value)
+      values.forEach((week) => {
+        this.selectedData.push(week)
       })
       resolve(this.selectedData)
     }) 
@@ -166,36 +167,38 @@ export class TensorflowService implements OnDestroy {
   }
   
   // compile & train the model
-  train() {
-    if (this.Model) {
-      this.Model.compile({
-        optimizer: tf.train.adam(0.001),
-        loss: tf.losses.huberLoss,
-        metrics: ['mse']
-      })
-      console.log('model compiled')
-      $("body").find("*").attr("disabled", "disabled");
-      $("body").find("a").click(function (e) { e.preventDefault(); });
-      this.Model.fit(this.inputSet, this.targetSet, {
-        epochs: this.epochs,
-        batchSize: this.batchSize,
-        callbacks: [],
-        validationSplit: 0.6
-      })
-      .then((info) => {
-        $("body").find("*").removeAttr("disabled");
-        $("body").find("a").unbind("click");
-        console.log(info)
-        console.log('training complete: mae:', info.history.mse.slice(-1))
-        // console.log(this.Model.predict(tf.tensor([12])).toString())
-        return this.predict()
-      })
-      .catch((err) => {
-        $("body").find("*").removeAttr("disabled");
-        $("body").find("a").unbind("click");
-        console.log(err)
-      })
-    }
+  train(): any {
+    return new Promise((resolve, reject) => {
+      if (this.Model) {
+        this.Model.compile({
+          optimizer: tf.train.adam(0.001),
+          loss: tf.losses.huberLoss,
+          metrics: ['mse']
+        })
+        console.log('model compiled')
+        $("body").find("*").attr("disabled", "disabled");
+        $("body").find("a").click(function (e) { e.preventDefault(); });
+        this.Model.fit(this.inputSet, this.targetSet, {
+          epochs: this.epochs,
+          batchSize: this.batchSize,
+          callbacks: [],
+          validationSplit: 0.6
+        })
+        .then((info) => {
+          $("body").find("*").removeAttr("disabled");
+          $("body").find("a").unbind("click");
+          console.log(info)
+          console.log('training complete: mae:', info.history.mse.slice(-1))
+          // console.log(this.Model.predict(tf.tensor([12])).toString())
+          resolve(this.predict())
+        })
+        .catch((err) => {
+          $("body").find("*").removeAttr("disabled");
+          $("body").find("a").unbind("click");
+          console.log(err)
+        })
+      }
+    })    
   }
 
   predict() {
