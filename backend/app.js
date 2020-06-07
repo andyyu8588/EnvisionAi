@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 
 // routes 
 const TfmodelRoute = require('./routes/Tfmodel')
@@ -19,5 +20,10 @@ app.use((req, res, next) => {
 app.use('/Tfmodel', TfmodelRoute)
 app.use('/search', trendsapiRoute)
 app.use('/home', TestRoute)
+
+// serve angular
+// app.use((req, res, next) => {
+//   res.sendFile(express.static(path.resolve(__dirname, '..', 'dist')))
+// })
 
 module.exports = app

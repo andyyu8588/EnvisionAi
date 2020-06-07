@@ -1,4 +1,3 @@
-import { CountriesModel } from './../components/sidebar/countries.model';
 import { Subscription } from 'rxjs';
 import { TrendsapiService } from './trendsapi.service';
 import { HttpClient } from '@angular/common/http';
@@ -24,19 +23,16 @@ export class TensorflowService implements OnDestroy {
   // selectedData: number[] = [0,1,2,3,4,5,6,7,8,9]
 
   // training parameters
-  epochs: number = 50
+  epochs: number = 45
   split: number = Math.floor(this.selectedData.length*1)
   windowSize: number = 4
-  batchSize: number = 3
+  batchSize: number = 2
 
   // finished dataset
   // trainSet = [tf.ones([2,3])]
   // targetSet = [tf.ones([2,1])]
-  inputSet
-  targetSet
-
-  validateInput
-  validateTarget
+  inputSet: tf.Tensor
+  targetSet: tf.Tensor
 
   constructor(private TrendsapiService: TrendsapiService) {
     // subscribe to trendsapi calls
@@ -172,10 +168,13 @@ export class TensorflowService implements OnDestroy {
         epochs: this.epochs,
         batchSize: this.batchSize,
         callbacks: [],
-        validationSplit: 0.7
+        validationSplit: 0.6
       })
       .then((info) => {
+        console.log(info)
         console.log('training complete: mae:', info.history.mae.slice(-1))
+        console.log(this.Model.predict(tf.tensor([20, 30, 15], [1, 3])).toString())
+        this.predict()
       })
       .catch((err) => {
         console.log(err)
@@ -184,7 +183,17 @@ export class TensorflowService implements OnDestroy {
   }
 
   predict() {
-    console.log('predict' + this.Model.predict(tf.tensor2d([87,80,82], [1, 3])))
+    let x_axis: number[] = this.selectedData.slice(-3)
+    let predictions: any[] = []
+    for (let x=0; x<6; x++) {
+      console.log(x_axis)
+      let pred = this.Model.predict(tf.tensor(x_axis, [1, 3]))
+      let ok = pred.toString().substring(14, pred.toString().length - 4)
+      predictions.push(parseFloat(ok))
+      x_axis.push(parseFloat(ok))
+      x_axis.shift()
+    }
+    console.log('predict 6month:' + predictions)
   }
 
   ngOnDestroy() {
