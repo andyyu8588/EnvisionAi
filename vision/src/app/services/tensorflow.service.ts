@@ -54,16 +54,15 @@ export class TensorflowService implements OnDestroy {
     .then((layerModel) => {
       console.log('model imported successfully')
       this.Model = layerModel
-      this.createDataset()
-      .then(() => {
-        console.log(this.inputSet)
-        console.log(this.targetSet)
-        this.train()
-      })
-      .catch(() => {
-        console.log('dfda')
-      })
-      // this.train()
+      // this.createDataset()
+      // .then(() => {
+      //   console.log(this.inputSet)
+      //   console.log(this.targetSet)
+      //   this.train()
+      // })
+      // .catch(() => {
+      //   console.log('dfda')
+      // })
     })
     .catch((err) => {
       console.log(err)
@@ -131,26 +130,26 @@ export class TensorflowService implements OnDestroy {
           res.targets.forEach((element: number[]) => {
             _inputTargets = _inputTargets.concat(element)
           })
-          console.log(_inputSet.length, _inputTargets.length)
+          // console.log(_inputSet.length, _inputTargets.length)
           this.inputSet = tf.tensor2d(_inputSet, [(_inputSet.length/(this.windowSize-1)), this.windowSize -1], 'int32')
           this.targetSet = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
           
-          
-          this.sliceArr(_validate)
-          .then((res) => {
-            let _inputSet: number[] = []
-            res.inputs.forEach((element: number[]) => {
-              _inputSet = _inputSet.concat(element)
-            })
-            let _inputTargets: number[] = []
-            res.targets.forEach((element: number[]) => {
-              _inputTargets = _inputTargets.concat(element)
-            })
-            console.log(_inputSet.length, _inputTargets.length)
-            this.validateInput = tf.tensor2d(_inputSet, [Math.floor((_inputSet.length/(this.windowSize - 1))), this.windowSize -1], 'int32')
-            this.validateTarget = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
-            resolve()
-          })
+          resolve()
+          // this.sliceArr(_validate)
+          // .then((res) => {
+          //   let _inputSet: number[] = []
+          //   res.inputs.forEach((element: number[]) => {
+          //     _inputSet = _inputSet.concat(element)
+          //   })
+          //   let _inputTargets: number[] = []
+          //   res.targets.forEach((element: number[]) => {
+          //     _inputTargets = _inputTargets.concat(element)
+          //   })
+          //   console.log(_inputSet.length, _inputTargets.length)
+          //   this.validateInput = tf.tensor2d(_inputSet, [Math.floor((_inputSet.length/(this.windowSize - 1))), this.windowSize -1], 'int32')
+          //   this.validateTarget = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
+          //   resolve()
+          // })
         })
       } else {
         console.log('bruh')
@@ -176,7 +175,7 @@ export class TensorflowService implements OnDestroy {
         validationSplit: 0.7
       })
       .then((info) => {
-        console.log('training complete', info)
+        console.log('training complete: mae:', info.history.mae.slice(-1))
       })
       .catch((err) => {
         console.log(err)
