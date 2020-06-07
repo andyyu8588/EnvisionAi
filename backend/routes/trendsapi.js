@@ -13,14 +13,12 @@ let searchedCountries = ['US', 'CA', 'MX', 'RU', 'DE', 'TR', 'GB', 'FR', 'IT', '
 
 router.get('', (req, res, next) => {
   console.log('search request received')
-  console.log(req.query.keyword)
-  console.log(req.query.year)
   if (req.params) { // if there are params
     getData(req.query.keyword, req.query.year).then((done) => { // successful search with keyword and year
       console.log('results delivered')
     
       // for debugging purposes
-      console.log(util.inspect(finalData, {showHidden: false, depth: null}))
+      // console.log(util.inspect(finalData, {showHidden: false, depth: null}))
 
       // send back the data
       res.status(200).json({
