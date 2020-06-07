@@ -91,13 +91,15 @@ export class SidebarComponent implements OnInit, OnDestroy{
 
     return value;
   }
-  selected(event){
-    if (typeof(event)=="string"){
+
+  selected(event) {
+    if (typeof(event) == "string") {
       this.SidebarService.parseSendData(event)
     }
-    else{
+    else {
       this.SidebarService.parseSendData(event.name)
     }
+    console.log(this.sentData)
   }
   checkLoading(){
     return this.loading
