@@ -1,8 +1,8 @@
-export const originalDefaultData =
-[
+export const originalDefaultData = { data : [
   {
     name: 'US',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'US',
@@ -373,6 +373,7 @@ export const originalDefaultData =
   {
     name: 'CA',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'CA',
@@ -743,41 +744,42 @@ export const originalDefaultData =
   {
     name: 'MX',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'MX',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 25
       },
       {
         name: 'MX',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 27
       },
       {
         name: 'MX',
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 20
       },
       {
         name: 'MX',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 18
       },
       {
         name: 'MX',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 22
       },
       {
         name: 'MX',
@@ -791,28 +793,28 @@ export const originalDefaultData =
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 18
       },
       {
         name: 'MX',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 20
       },
       {
         name: 'MX',
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 19
       },
       {
         name: 'MX',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 33
+        value: 32
       },
       {
         name: 'MX',
@@ -826,7 +828,7 @@ export const originalDefaultData =
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 34
       },
       {
         name: 'MX',
@@ -847,7 +849,7 @@ export const originalDefaultData =
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 51
+        value: 50
       },
       {
         name: 'MX',
@@ -861,42 +863,42 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 98
+        value: 96
       },
       {
         name: 'MX',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 53
+        value: 51
       },
       {
         name: 'MX',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 36
+        value: 35
       },
       {
         name: 'MX',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 25
+        value: 23
       },
       {
         name: 'MX',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 18
       },
       {
         name: 'MX',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 16
       },
       {
         name: 'MX',
@@ -924,7 +926,7 @@ export const originalDefaultData =
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 11
       },
       {
         name: 'MX',
@@ -938,7 +940,7 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'MX',
@@ -966,7 +968,7 @@ export const originalDefaultData =
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 11
       },
       {
         name: 'MX',
@@ -1008,7 +1010,7 @@ export const originalDefaultData =
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'MX',
@@ -1043,14 +1045,14 @@ export const originalDefaultData =
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'MX',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'MX',
@@ -1064,7 +1066,7 @@ export const originalDefaultData =
         date: 'Nov 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'MX',
@@ -1099,7 +1101,7 @@ export const originalDefaultData =
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'MX',
@@ -1113,118 +1115,119 @@ export const originalDefaultData =
   {
     name: 'RU',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'RU',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 43
+        value: 42
       },
       {
         name: 'RU',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 34
+        value: 40
       },
       {
         name: 'RU',
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 17
       },
       {
         name: 'RU',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 16
       },
       {
         name: 'RU',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 24
       },
       {
         name: 'RU',
         date: 'Feb 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 12
       },
       {
         name: 'RU',
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 21
       },
       {
         name: 'RU',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 27
       },
       {
         name: 'RU',
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 33
+        value: 41
       },
       {
         name: 'RU',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 34
+        value: 39
       },
       {
         name: 'RU',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 34
+        value: 42
       },
       {
         name: 'RU',
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 48
+        value: 41
       },
       {
         name: 'RU',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 29
+        value: 32
       },
       {
         name: 'RU',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 26
       },
       {
         name: 'RU',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 29
       },
       {
         name: 'RU',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 67
+        value: 57
       },
       {
         name: 'RU',
@@ -1238,56 +1241,56 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 70
+        value: 60
       },
       {
         name: 'RU',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 39
+        value: 36
       },
       {
         name: 'RU',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 21
       },
       {
         name: 'RU',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 18
       },
       {
         name: 'RU',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 28
       },
       {
         name: 'RU',
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 25
       },
       {
         name: 'RU',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 31
       },
       {
         name: 'RU',
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 36
+        value: 47
       },
       {
         name: 'RU',
@@ -1301,35 +1304,35 @@ export const originalDefaultData =
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 25
+        value: 32
       },
       {
         name: 'RU',
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 29
+        value: 32
       },
       {
         name: 'RU',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 23
       },
       {
         name: 'RU',
         date: 'Jul 28 – Aug 3, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 46
+        value: 61
       },
       {
         name: 'RU',
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 39
+        value: 42
       },
       {
         name: 'RU',
@@ -1343,35 +1346,35 @@ export const originalDefaultData =
         date: 'Aug 18 – 24, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 29
       },
       {
         name: 'RU',
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 13
       },
       {
         name: 'RU',
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 15
       },
       {
         name: 'RU',
         date: 'Sep 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 23
       },
       {
         name: 'RU',
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 14
       },
       {
         name: 'RU',
@@ -1385,118 +1388,119 @@ export const originalDefaultData =
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 20
       },
       {
         name: 'RU',
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 17
       },
       {
         name: 'RU',
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 12
       },
       {
         name: 'RU',
         date: 'Oct 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 42
       },
       {
         name: 'RU',
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 17
       },
       {
         name: 'RU',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'RU',
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 19
       },
       {
         name: 'RU',
         date: 'Nov 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 11
       },
       {
         name: 'RU',
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 16
       },
       {
         name: 'RU',
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
-        hasData: false,
-        value: 0
+        hasData: true,
+        value: 16
       },
       {
         name: 'RU',
         date: 'Dec 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 8
       },
       {
         name: 'RU',
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 25
       },
       {
         name: 'RU',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 14
       },
       {
         name: 'RU',
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 15
       }
     ]
   },
   {
     name: 'DE',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'DE',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 19
       },
       {
         name: 'DE',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 17
       },
       {
         name: 'DE',
@@ -1517,7 +1521,7 @@ export const originalDefaultData =
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 15
       },
       {
         name: 'DE',
@@ -1538,7 +1542,7 @@ export const originalDefaultData =
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'DE',
@@ -1552,7 +1556,7 @@ export const originalDefaultData =
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 25
+        value: 26
       },
       {
         name: 'DE',
@@ -1566,28 +1570,28 @@ export const originalDefaultData =
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 20
       },
       {
         name: 'DE',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 26
       },
       {
         name: 'DE',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 31
       },
       {
         name: 'DE',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 36
       },
       {
         name: 'DE',
@@ -1601,42 +1605,42 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 83
+        value: 87
       },
       {
         name: 'DE',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 42
+        value: 47
       },
       {
         name: 'DE',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 28
       },
       {
         name: 'DE',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 24
       },
       {
         name: 'DE',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'DE',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'DE',
@@ -1650,7 +1654,7 @@ export const originalDefaultData =
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'DE',
@@ -1678,14 +1682,14 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'DE',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'DE',
@@ -1699,14 +1703,14 @@ export const originalDefaultData =
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'DE',
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 11
       },
       {
         name: 'DE',
@@ -1720,7 +1724,7 @@ export const originalDefaultData =
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'DE',
@@ -1741,35 +1745,35 @@ export const originalDefaultData =
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'DE',
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'DE',
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'DE',
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       },
       {
         name: 'DE',
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'DE',
@@ -1797,7 +1801,7 @@ export const originalDefaultData =
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'DE',
@@ -1811,7 +1815,7 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       },
       {
         name: 'DE',
@@ -1832,14 +1836,14 @@ export const originalDefaultData =
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'DE',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'DE',
@@ -1853,34 +1857,35 @@ export const originalDefaultData =
   {
     name: 'TR',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'TR',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 30
       },
       {
         name: 'TR',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 33
       },
       {
         name: 'TR',
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 29
       },
       {
         name: 'TR',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 29
       },
       {
         name: 'TR',
@@ -1894,35 +1899,35 @@ export const originalDefaultData =
         date: 'Feb 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 21
       },
       {
         name: 'TR',
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 15
       },
       {
         name: 'TR',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 18
       },
       {
         name: 'TR',
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 22
       },
       {
         name: 'TR',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 33
+        value: 31
       },
       {
         name: 'TR',
@@ -1936,14 +1941,14 @@ export const originalDefaultData =
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 30
       },
       {
         name: 'TR',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 26
       },
       {
         name: 'TR',
@@ -1971,28 +1976,28 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 99
+        value: 98
       },
       {
         name: 'TR',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 45
+        value: 43
       },
       {
         name: 'TR',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 37
+        value: 35
       },
       {
         name: 'TR',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 27
       },
       {
         name: 'TR',
@@ -2006,28 +2011,28 @@ export const originalDefaultData =
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 27
       },
       {
         name: 'TR',
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 26
       },
       {
         name: 'TR',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 16
       },
       {
         name: 'TR',
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 15
       },
       {
         name: 'TR',
@@ -2041,21 +2046,21 @@ export const originalDefaultData =
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 18
       },
       {
         name: 'TR',
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 13
       },
       {
         name: 'TR',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 15
       },
       {
         name: 'TR',
@@ -2069,7 +2074,7 @@ export const originalDefaultData =
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'TR',
@@ -2083,21 +2088,21 @@ export const originalDefaultData =
         date: 'Aug 18 – 24, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'TR',
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 14
       },
       {
         name: 'TR',
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 14
       },
       {
         name: 'TR',
@@ -2125,7 +2130,7 @@ export const originalDefaultData =
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'TR',
@@ -2139,7 +2144,7 @@ export const originalDefaultData =
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'TR',
@@ -2153,14 +2158,14 @@ export const originalDefaultData =
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 7
       },
       {
         name: 'TR',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'TR',
@@ -2174,14 +2179,14 @@ export const originalDefaultData =
         date: 'Nov 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 9
       },
       {
         name: 'TR',
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'TR',
@@ -2216,27 +2221,28 @@ export const originalDefaultData =
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 9
       }
     ]
   },
   {
     name: 'GB',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'GB',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 22
       },
       {
         name: 'GB',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 19
       },
       {
         name: 'GB',
@@ -2250,14 +2256,14 @@ export const originalDefaultData =
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'GB',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'GB',
@@ -2271,7 +2277,7 @@ export const originalDefaultData =
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'GB',
@@ -2292,14 +2298,14 @@ export const originalDefaultData =
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 24
       },
       {
         name: 'GB',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 22
       },
       {
         name: 'GB',
@@ -2313,21 +2319,21 @@ export const originalDefaultData =
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 27
       },
       {
         name: 'GB',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 25
       },
       {
         name: 'GB',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 31
       },
       {
         name: 'GB',
@@ -2341,21 +2347,21 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 82
+        value: 79
       },
       {
         name: 'GB',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 42
+        value: 40
       },
       {
         name: 'GB',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 23
       },
       {
         name: 'GB',
@@ -2383,14 +2389,14 @@ export const originalDefaultData =
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'GB',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 7
       },
       {
         name: 'GB',
@@ -2425,7 +2431,7 @@ export const originalDefaultData =
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 9
       },
       {
         name: 'GB',
@@ -2439,7 +2445,7 @@ export const originalDefaultData =
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'GB',
@@ -2467,21 +2473,21 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'GB',
         date: 'Sep 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'GB',
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'GB',
@@ -2495,7 +2501,7 @@ export const originalDefaultData =
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'GB',
@@ -2509,7 +2515,7 @@ export const originalDefaultData =
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'GB',
@@ -2572,14 +2578,14 @@ export const originalDefaultData =
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'GB',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'GB',
@@ -2593,13 +2599,14 @@ export const originalDefaultData =
   {
     name: 'FR',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'FR',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'FR',
@@ -2641,7 +2648,7 @@ export const originalDefaultData =
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'FR',
@@ -2662,14 +2669,14 @@ export const originalDefaultData =
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 14
       },
       {
         name: 'FR',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'FR',
@@ -2683,21 +2690,21 @@ export const originalDefaultData =
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 18
       },
       {
         name: 'FR',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 18
       },
       {
         name: 'FR',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 21
       },
       {
         name: 'FR',
@@ -2711,42 +2718,42 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 77
+        value: 74
       },
       {
         name: 'FR',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 34
+        value: 33
       },
       {
         name: 'FR',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 19
       },
       {
         name: 'FR',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 11
       },
       {
         name: 'FR',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'FR',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'FR',
@@ -2767,21 +2774,21 @@ export const originalDefaultData =
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'FR',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'FR',
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'FR',
@@ -2795,7 +2802,7 @@ export const originalDefaultData =
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 7
       },
       {
         name: 'FR',
@@ -2816,7 +2823,7 @@ export const originalDefaultData =
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'FR',
@@ -2830,7 +2837,7 @@ export const originalDefaultData =
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       },
       {
         name: 'FR',
@@ -2851,7 +2858,7 @@ export const originalDefaultData =
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'FR',
@@ -2872,7 +2879,7 @@ export const originalDefaultData =
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'FR',
@@ -2907,7 +2914,7 @@ export const originalDefaultData =
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 2
       },
       {
         name: 'FR',
@@ -2921,7 +2928,7 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'FR',
@@ -2956,13 +2963,14 @@ export const originalDefaultData =
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       }
     ]
   },
   {
     name: 'IT',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'IT',
@@ -3333,13 +3341,14 @@ export const originalDefaultData =
   {
     name: 'ES',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'ES',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 21
       },
       {
         name: 'ES',
@@ -3360,14 +3369,14 @@ export const originalDefaultData =
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 15
       },
       {
         name: 'ES',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 15
       },
       {
         name: 'ES',
@@ -3395,21 +3404,21 @@ export const originalDefaultData =
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 15
       },
       {
         name: 'ES',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 25
       },
       {
         name: 'ES',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 29
       },
       {
         name: 'ES',
@@ -3423,28 +3432,28 @@ export const originalDefaultData =
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 24
       },
       {
         name: 'ES',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 26
       },
       {
         name: 'ES',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 29
+        value: 30
       },
       {
         name: 'ES',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 89
+        value: 93
       },
       {
         name: 'ES',
@@ -3458,7 +3467,7 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 44
+        value: 41
       },
       {
         name: 'ES',
@@ -3472,28 +3481,28 @@ export const originalDefaultData =
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 17
       },
       {
         name: 'ES',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 14
       },
       {
         name: 'ES',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 12
       },
       {
         name: 'ES',
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 15
       },
       {
         name: 'ES',
@@ -3507,28 +3516,28 @@ export const originalDefaultData =
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'ES',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 13
       },
       {
         name: 'ES',
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'ES',
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 13
       },
       {
         name: 'ES',
@@ -3542,14 +3551,14 @@ export const originalDefaultData =
         date: 'Jul 28 – Aug 3, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'ES',
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'ES',
@@ -3563,7 +3572,7 @@ export const originalDefaultData =
         date: 'Aug 18 – 24, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'ES',
@@ -3577,7 +3586,7 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'ES',
@@ -3612,7 +3621,7 @@ export const originalDefaultData =
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 7
       },
       {
         name: 'ES',
@@ -3626,7 +3635,7 @@ export const originalDefaultData =
         date: 'Oct 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'ES',
@@ -3640,14 +3649,14 @@ export const originalDefaultData =
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'ES',
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'ES',
@@ -3661,14 +3670,14 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'ES',
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       },
       {
         name: 'ES',
@@ -3682,14 +3691,14 @@ export const originalDefaultData =
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'ES',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 9
       },
       {
         name: 'ES',
@@ -3703,6 +3712,7 @@ export const originalDefaultData =
   {
     name: 'UA',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'UA',
@@ -4073,34 +4083,35 @@ export const originalDefaultData =
   {
     name: 'PL',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'PL',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 14
       },
       {
         name: 'PL',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 12
       },
       {
         name: 'PL',
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'PL',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'PL',
@@ -4114,35 +4125,35 @@ export const originalDefaultData =
         date: 'Feb 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'PL',
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 12
       },
       {
         name: 'PL',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 9
       },
       {
         name: 'PL',
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'PL',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 16
       },
       {
         name: 'PL',
@@ -4156,14 +4167,14 @@ export const originalDefaultData =
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 15
       },
       {
         name: 'PL',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 19
+        value: 20
       },
       {
         name: 'PL',
@@ -4177,14 +4188,14 @@ export const originalDefaultData =
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 18
       },
       {
         name: 'PL',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 93
+        value: 87
       },
       {
         name: 'PL',
@@ -4198,35 +4209,35 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 26
+        value: 28
       },
       {
         name: 'PL',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 23
       },
       {
         name: 'PL',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 17
       },
       {
         name: 'PL',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'PL',
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 12
       },
       {
         name: 'PL',
@@ -4240,21 +4251,21 @@ export const originalDefaultData =
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 11
       },
       {
         name: 'PL',
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 11
       },
       {
         name: 'PL',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'PL',
@@ -4268,14 +4279,14 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'PL',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'PL',
@@ -4296,7 +4307,7 @@ export const originalDefaultData =
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'PL',
@@ -4317,7 +4328,7 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       },
       {
         name: 'PL',
@@ -4338,14 +4349,14 @@ export const originalDefaultData =
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'PL',
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'PL',
@@ -4366,28 +4377,28 @@ export const originalDefaultData =
         date: 'Oct 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 2
+        value: 3
       },
       {
         name: 'PL',
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'PL',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'PL',
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 7
       },
       {
         name: 'PL',
@@ -4408,7 +4419,7 @@ export const originalDefaultData =
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 6
       },
       {
         name: 'PL',
@@ -4422,14 +4433,14 @@ export const originalDefaultData =
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'PL',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'PL',
@@ -4443,118 +4454,119 @@ export const originalDefaultData =
   {
     name: 'RO',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'RO',
         date: 'Jan 6 – 12, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 40
-      },
-      {
-        name: 'RO',
-        date: 'Jan 13 – 19, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 15
-      },
-      {
-        name: 'RO',
-        date: 'Jan 20 – 26, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 21
-      },
-      {
-        name: 'RO',
-        date: 'Jan 27 – Feb 2, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 16
-      },
-      {
-        name: 'RO',
-        date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
         value: 28
       },
       {
         name: 'RO',
-        date: 'Feb 10 – 16, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 12
-      },
-      {
-        name: 'RO',
-        date: 'Feb 17 – 23, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 18
-      },
-      {
-        name: 'RO',
-        date: 'Feb 24 – Mar 2, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 11
-      },
-      {
-        name: 'RO',
-        date: 'Mar 3 – 9, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 12
-      },
-      {
-        name: 'RO',
-        date: 'Mar 10 – 16, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 15
-      },
-      {
-        name: 'RO',
-        date: 'Mar 17 – 23, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 15
-      },
-      {
-        name: 'RO',
-        date: 'Mar 24 – 30, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 7
-      },
-      {
-        name: 'RO',
-        date: 'Mar 31 – Apr 6, 2019',
+        date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
         value: 21
       },
       {
         name: 'RO',
-        date: 'Apr 7 – 13, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 20
-      },
-      {
-        name: 'RO',
-        date: 'Apr 14 – 20, 2019',
+        date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
         value: 24
       },
       {
         name: 'RO',
+        date: 'Jan 27 – Feb 2, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 20
+      },
+      {
+        name: 'RO',
+        date: 'Feb 3 – 9, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 19
+      },
+      {
+        name: 'RO',
+        date: 'Feb 10 – 16, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 16
+      },
+      {
+        name: 'RO',
+        date: 'Feb 17 – 23, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 14
+      },
+      {
+        name: 'RO',
+        date: 'Feb 24 – Mar 2, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 15
+      },
+      {
+        name: 'RO',
+        date: 'Mar 3 – 9, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 14
+      },
+      {
+        name: 'RO',
+        date: 'Mar 10 – 16, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 13
+      },
+      {
+        name: 'RO',
+        date: 'Mar 17 – 23, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 23
+      },
+      {
+        name: 'RO',
+        date: 'Mar 24 – 30, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 11
+      },
+      {
+        name: 'RO',
+        date: 'Mar 31 – Apr 6, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 19
+      },
+      {
+        name: 'RO',
+        date: 'Apr 7 – 13, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 26
+      },
+      {
+        name: 'RO',
+        date: 'Apr 14 – 20, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 26
+      },
+      {
+        name: 'RO',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 51
+        value: 63
       },
       {
         name: 'RO',
@@ -4568,28 +4580,28 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 51
+        value: 43
       },
       {
         name: 'RO',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 23
       },
       {
         name: 'RO',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 10
       },
       {
         name: 'RO',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 19
       },
       {
         name: 'RO',
@@ -4603,28 +4615,28 @@ export const originalDefaultData =
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'RO',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 12
       },
       {
         name: 'RO',
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 14
       },
       {
         name: 'RO',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'RO',
@@ -4638,28 +4650,28 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 7
       },
       {
         name: 'RO',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 15
       },
       {
         name: 'RO',
         date: 'Jul 28 – Aug 3, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 16
       },
       {
         name: 'RO',
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 13
       },
       {
         name: 'RO',
@@ -4673,84 +4685,84 @@ export const originalDefaultData =
         date: 'Aug 18 – 24, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 6
       },
       {
         name: 'RO',
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 16
       },
       {
         name: 'RO',
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 8
       },
       {
         name: 'RO',
         date: 'Sep 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'RO',
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 7
       },
       {
         name: 'RO',
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 7
       },
       {
         name: 'RO',
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 8
       },
       {
         name: 'RO',
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 7
       },
       {
         name: 'RO',
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 9
       },
       {
         name: 'RO',
         date: 'Oct 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 7
       },
       {
         name: 'RO',
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'RO',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'RO',
@@ -4764,55 +4776,56 @@ export const originalDefaultData =
         date: 'Nov 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 6
       },
       {
         name: 'RO',
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'RO',
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'RO',
         date: 'Dec 8 – 14, 2019',
         query: 'Infinity War',
-        hasData: false,
-        value: 0
+        hasData: true,
+        value: 2
       },
       {
         name: 'RO',
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 11
       },
       {
         name: 'RO',
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 33
       },
       {
         name: 'RO',
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       }
     ]
   },
   {
     name: 'CN',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'CN',
@@ -4825,8 +4838,8 @@ export const originalDefaultData =
         name: 'CN',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
-        hasData: true,
-        value: 100
+        hasData: false,
+        value: 0
       },
       {
         name: 'CN',
@@ -4854,14 +4867,14 @@ export const originalDefaultData =
         date: 'Feb 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 45
+        value: 76
       },
       {
         name: 'CN',
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 59
       },
       {
         name: 'CN',
@@ -4881,22 +4894,22 @@ export const originalDefaultData =
         name: 'CN',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
-        hasData: true,
-        value: 32
+        hasData: false,
+        value: 0
       },
       {
         name: 'CN',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 52
       },
       {
         name: 'CN',
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 53
       },
       {
         name: 'CN',
@@ -4910,42 +4923,42 @@ export const originalDefaultData =
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 52
       },
       {
         name: 'CN',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 29
+        value: 49
       },
       {
         name: 'CN',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 59
+        value: 100
       },
       {
         name: 'CN',
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
-        hasData: true,
-        value: 38
+        hasData: false,
+        value: 0
       },
       {
         name: 'CN',
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 59
+        value: 50
       },
       {
         name: 'CN',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 52
       },
       {
         name: 'CN',
@@ -4966,7 +4979,7 @@ export const originalDefaultData =
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 36
+        value: 60
       },
       {
         name: 'CN',
@@ -4987,21 +5000,21 @@ export const originalDefaultData =
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 53
       },
       {
         name: 'CN',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 54
       },
       {
         name: 'CN',
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 48
+        value: 53
       },
       {
         name: 'CN',
@@ -5029,7 +5042,7 @@ export const originalDefaultData =
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 59
       },
       {
         name: 'CN',
@@ -5092,7 +5105,7 @@ export const originalDefaultData =
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 36
+        value: 61
       },
       {
         name: 'CN',
@@ -5113,21 +5126,21 @@ export const originalDefaultData =
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 59
       },
       {
         name: 'CN',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
-        hasData: true,
-        value: 35
+        hasData: false,
+        value: 0
       },
       {
         name: 'CN',
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 34
+        value: 57
       },
       {
         name: 'CN',
@@ -5141,7 +5154,7 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 58
       },
       {
         name: 'CN',
@@ -5175,21 +5188,22 @@ export const originalDefaultData =
         name: 'CN',
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
-        hasData: true,
-        value: 41
+        hasData: false,
+        value: 0
       }
     ]
   },
   {
     name: 'IN',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'IN',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 16
       },
       {
         name: 'IN',
@@ -5203,7 +5217,7 @@ export const originalDefaultData =
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 15
       },
       {
         name: 'IN',
@@ -5259,7 +5273,7 @@ export const originalDefaultData =
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 29
       },
       {
         name: 'IN',
@@ -5273,7 +5287,7 @@ export const originalDefaultData =
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 29
       },
       {
         name: 'IN',
@@ -5301,7 +5315,7 @@ export const originalDefaultData =
         date: 'Apr 28 – May 4, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 77
+        value: 76
       },
       {
         name: 'IN',
@@ -5322,14 +5336,14 @@ export const originalDefaultData =
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 19
       },
       {
         name: 'IN',
         date: 'May 26 – Jun 1, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 17
       },
       {
         name: 'IN',
@@ -5343,14 +5357,14 @@ export const originalDefaultData =
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 11
       },
       {
         name: 'IN',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'IN',
@@ -5378,7 +5392,7 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'IN',
@@ -5406,7 +5420,7 @@ export const originalDefaultData =
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 8
       },
       {
         name: 'IN',
@@ -5427,7 +5441,7 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'IN',
@@ -5441,7 +5455,7 @@ export const originalDefaultData =
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 5
       },
       {
         name: 'IN',
@@ -5497,7 +5511,7 @@ export const originalDefaultData =
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'IN',
@@ -5546,13 +5560,14 @@ export const originalDefaultData =
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 4
       }
     ]
   },
   {
     name: 'ID',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'ID',
@@ -5923,20 +5938,21 @@ export const originalDefaultData =
   {
     name: 'PK',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'PK',
         date: 'Jan 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 33
+        value: 28
       },
       {
         name: 'PK',
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 21
       },
       {
         name: 'PK',
@@ -5950,14 +5966,14 @@ export const originalDefaultData =
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 29
+        value: 24
       },
       {
         name: 'PK',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 28
+        value: 25
       },
       {
         name: 'PK',
@@ -5971,49 +5987,49 @@ export const originalDefaultData =
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 17
       },
       {
         name: 'PK',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 23
+        value: 20
       },
       {
         name: 'PK',
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 26
       },
       {
         name: 'PK',
         date: 'Mar 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 22
       },
       {
         name: 'PK',
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 30
+        value: 28
       },
       {
         name: 'PK',
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 31
+        value: 29
       },
       {
         name: 'PK',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 42
+        value: 36
       },
       {
         name: 'PK',
@@ -6027,14 +6043,14 @@ export const originalDefaultData =
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 44
+        value: 38
       },
       {
         name: 'PK',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 87
+        value: 80
       },
       {
         name: 'PK',
@@ -6048,21 +6064,21 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 62
+        value: 60
       },
       {
         name: 'PK',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 58
+        value: 52
       },
       {
         name: 'PK',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 31
       },
       {
         name: 'PK',
@@ -6076,98 +6092,98 @@ export const originalDefaultData =
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 27
+        value: 28
       },
       {
         name: 'PK',
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 19
       },
       {
         name: 'PK',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 18
+        value: 13
       },
       {
         name: 'PK',
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 15
       },
       {
         name: 'PK',
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 19
       },
       {
         name: 'PK',
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 11
       },
       {
         name: 'PK',
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 14
       },
       {
         name: 'PK',
         date: 'Jul 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 18
       },
       {
         name: 'PK',
         date: 'Jul 28 – Aug 3, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 19
       },
       {
         name: 'PK',
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 16
+        value: 14
       },
       {
         name: 'PK',
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 20
+        value: 18
       },
       {
         name: 'PK',
         date: 'Aug 18 – 24, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 15
+        value: 14
       },
       {
         name: 'PK',
         date: 'Aug 25 – 31, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'PK',
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 15
       },
       {
         name: 'PK',
@@ -6181,56 +6197,56 @@ export const originalDefaultData =
         date: 'Sep 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 9
       },
       {
         name: 'PK',
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'PK',
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'PK',
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'PK',
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 8
       },
       {
         name: 'PK',
         date: 'Oct 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'PK',
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'PK',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 12
       },
       {
         name: 'PK',
@@ -6251,28 +6267,28 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 7
       },
       {
         name: 'PK',
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'PK',
         date: 'Dec 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 12
       },
       {
         name: 'PK',
         date: 'Dec 15 – 21, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 9
       },
       {
         name: 'PK',
@@ -6286,13 +6302,14 @@ export const originalDefaultData =
         date: 'Dec 29, 2019 – Jan 4, 2020',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       }
     ]
   },
   {
     name: 'JP',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'JP',
@@ -6663,6 +6680,7 @@ export const originalDefaultData =
   {
     name: 'PH',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'PH',
@@ -6683,21 +6701,21 @@ export const originalDefaultData =
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 11
       },
       {
         name: 'PH',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'PH',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 11
       },
       {
         name: 'PH',
@@ -6711,14 +6729,14 @@ export const originalDefaultData =
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'PH',
         date: 'Feb 24 – Mar 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'PH',
@@ -6739,14 +6757,14 @@ export const originalDefaultData =
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 14
+        value: 16
       },
       {
         name: 'PH',
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 18
       },
       {
         name: 'PH',
@@ -6760,21 +6778,21 @@ export const originalDefaultData =
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 23
       },
       {
         name: 'PH',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 32
+        value: 34
       },
       {
         name: 'PH',
         date: 'Apr 21 – 27, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 97
+        value: 96
       },
       {
         name: 'PH',
@@ -6788,14 +6806,14 @@ export const originalDefaultData =
         date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 35
+        value: 39
       },
       {
         name: 'PH',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 24
+        value: 22
       },
       {
         name: 'PH',
@@ -6837,7 +6855,7 @@ export const originalDefaultData =
         date: 'Jun 23 – 29, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 5
       },
       {
         name: 'PH',
@@ -6858,7 +6876,7 @@ export const originalDefaultData =
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 6
       },
       {
         name: 'PH',
@@ -6886,7 +6904,7 @@ export const originalDefaultData =
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'PH',
@@ -6907,7 +6925,7 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'PH',
@@ -6928,21 +6946,21 @@ export const originalDefaultData =
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'PH',
         date: 'Sep 29 – Oct 5, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'PH',
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'PH',
@@ -6963,7 +6981,7 @@ export const originalDefaultData =
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 2
+        value: 3
       },
       {
         name: 'PH',
@@ -6977,14 +6995,14 @@ export const originalDefaultData =
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'PH',
         date: 'Nov 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'PH',
@@ -6998,7 +7016,7 @@ export const originalDefaultData =
         date: 'Dec 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'PH',
@@ -7019,7 +7037,7 @@ export const originalDefaultData =
         date: 'Dec 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'PH',
@@ -7033,6 +7051,7 @@ export const originalDefaultData =
   {
     name: 'VN',
     keyword: 'Infinity War',
+    query: 'Infinity War',
     data: [
       {
         name: 'VN',
@@ -7046,42 +7065,42 @@ export const originalDefaultData =
         date: 'Jan 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 9
       },
       {
         name: 'VN',
         date: 'Jan 20 – 26, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 7
       },
       {
         name: 'VN',
         date: 'Jan 27 – Feb 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 12
       },
       {
         name: 'VN',
         date: 'Feb 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 14
       },
       {
         name: 'VN',
         date: 'Feb 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 8
       },
       {
         name: 'VN',
         date: 'Feb 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 8
       },
       {
         name: 'VN',
@@ -7095,7 +7114,7 @@ export const originalDefaultData =
         date: 'Mar 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 10
+        value: 12
       },
       {
         name: 'VN',
@@ -7109,70 +7128,70 @@ export const originalDefaultData =
         date: 'Mar 17 – 23, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 13
+        value: 12
       },
       {
         name: 'VN',
         date: 'Mar 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 9
       },
       {
         name: 'VN',
         date: 'Mar 31 – Apr 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 10
       },
       {
         name: 'VN',
         date: 'Apr 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 11
+        value: 12
       },
       {
         name: 'VN',
         date: 'Apr 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 21
+        value: 17
       },
       {
         name: 'VN',
         date: 'Apr 21 – 27, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 48
+      },
+      {
+        name: 'VN',
+        date: 'Apr 28 – May 4, 2019',
+        query: 'Infinity War',
+        hasData: true,
+        value: 100
+      },
+      {
+        name: 'VN',
+        date: 'May 5 – 11, 2019',
         query: 'Infinity War',
         hasData: true,
         value: 44
       },
       {
         name: 'VN',
-        date: 'Apr 28 – May 4, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 100
-      },
-      {
-        name: 'VN',
-        date: 'May 5 – 11, 2019',
-        query: 'Infinity War',
-        hasData: true,
-        value: 40
-      },
-      {
-        name: 'VN',
         date: 'May 12 – 18, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 22
+        value: 23
       },
       {
         name: 'VN',
         date: 'May 19 – 25, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 17
+        value: 15
       },
       {
         name: 'VN',
@@ -7186,21 +7205,21 @@ export const originalDefaultData =
         date: 'Jun 2 – 8, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 12
+        value: 10
       },
       {
         name: 'VN',
         date: 'Jun 9 – 15, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 10
       },
       {
         name: 'VN',
         date: 'Jun 16 – 22, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 8
       },
       {
         name: 'VN',
@@ -7214,21 +7233,21 @@ export const originalDefaultData =
         date: 'Jun 30 – Jul 6, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 9
+        value: 7
       },
       {
         name: 'VN',
         date: 'Jul 7 – 13, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 10
       },
       {
         name: 'VN',
         date: 'Jul 14 – 20, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 6
+        value: 7
       },
       {
         name: 'VN',
@@ -7242,21 +7261,21 @@ export const originalDefaultData =
         date: 'Jul 28 – Aug 3, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 5
       },
       {
         name: 'VN',
         date: 'Aug 4 – 10, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 7
+        value: 6
       },
       {
         name: 'VN',
         date: 'Aug 11 – 17, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 8
+        value: 6
       },
       {
         name: 'VN',
@@ -7277,7 +7296,7 @@ export const originalDefaultData =
         date: 'Sep 1 – 7, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 5
+        value: 3
       },
       {
         name: 'VN',
@@ -7298,7 +7317,7 @@ export const originalDefaultData =
         date: 'Sep 22 – 28, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'VN',
@@ -7312,14 +7331,14 @@ export const originalDefaultData =
         date: 'Oct 6 – 12, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 5
       },
       {
         name: 'VN',
         date: 'Oct 13 – 19, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 2
       },
       {
         name: 'VN',
@@ -7333,21 +7352,21 @@ export const originalDefaultData =
         date: 'Oct 27 – Nov 2, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 2
+        value: 3
       },
       {
         name: 'VN',
         date: 'Nov 3 – 9, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 2
+        value: 4
       },
       {
         name: 'VN',
         date: 'Nov 10 – 16, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 4
       },
       {
         name: 'VN',
@@ -7361,7 +7380,7 @@ export const originalDefaultData =
         date: 'Nov 24 – 30, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 4
+        value: 3
       },
       {
         name: 'VN',
@@ -7375,7 +7394,7 @@ export const originalDefaultData =
         date: 'Dec 8 – 14, 2019',
         query: 'Infinity War',
         hasData: true,
-        value: 3
+        value: 2
       },
       {
         name: 'VN',
@@ -7397,325 +7416,7 @@ export const originalDefaultData =
         query: 'Infinity War',
         hasData: true,
         value: 2
-      }
-    ]
-  },
-  {
-    country: 'Global',
-    keyword: 'Infinity War',
-    data: [
-      {
-        name: 'Global',
-        date: 'Jan 6 – 12, 2019',
-        hasData: true,
-        value: 26
-      },
-      {
-        name: 'Global',
-        date: 'Jan 13 – 19, 2019',
-        hasData: true,
-        value: 25
-      },
-      {
-        name: 'Global',
-        date: 'Jan 20 – 26, 2019',
-        hasData: true,
-        value: 19
-      },
-      {
-        name: 'Global',
-        date: 'Jan 27 – Feb 2, 2019',
-        hasData: true,
-        value: 17
-      },
-      {
-        name: 'Global',
-        date: 'Feb 3 – 9, 2019',
-        hasData: true,
-        value: 18
-      },
-      {
-        name: 'Global',
-        date: 'Feb 10 – 16, 2019',
-        hasData: true,
-        value: 16
-      },
-      {
-        name: 'Global',
-        date: 'Feb 17 – 23, 2019',
-        hasData: true,
-        value: 15
-      },
-      {
-        name: 'Global',
-        date: 'Feb 24 – Mar 2, 2019',
-        hasData: true,
-        value: 16
-      },
-      {
-        name: 'Global',
-        date: 'Mar 3 – 9, 2019',
-        hasData: true,
-        value: 19
-      },
-      {
-        name: 'Global',
-        date: 'Mar 10 – 16, 2019',
-        hasData: true,
-        value: 28
-      },
-      {
-        name: 'Global',
-        date: 'Mar 17 – 23, 2019',
-        hasData: true,
-        value: 27
-      },
-      {
-        name: 'Global',
-        date: 'Mar 24 – 30, 2019',
-        hasData: true,
-        value: 27
-      },
-      {
-        name: 'Global',
-        date: 'Mar 31 – Apr 6, 2019',
-        hasData: true,
-        value: 30
-      },
-      {
-        name: 'Global',
-        date: 'Apr 7 – 13, 2019',
-        hasData: true,
-        value: 29
-      },
-      {
-        name: 'Global',
-        date: 'Apr 14 – 20, 2019',
-        hasData: true,
-        value: 34
-      },
-      {
-        name: 'Global',
-        date: 'Apr 21 – 27, 2019',
-        hasData: true,
-        value: 100
-      },
-      {
-        name: 'Global',
-        date: 'Apr 28 – May 4, 2019',
-        hasData: true,
-        value: 95
-      },
-      {
-        name: 'Global',
-        date: 'May 5 – 11, 2019',
-        hasData: true,
-        value: 47
-      },
-      {
-        name: 'Global',
-        date: 'May 12 – 18, 2019',
-        hasData: true,
-        value: 29
-      },
-      {
-        name: 'Global',
-        date: 'May 19 – 25, 2019',
-        hasData: true,
-        value: 21
-      },
-      {
-        name: 'Global',
-        date: 'May 26 – Jun 1, 2019',
-        hasData: true,
-        value: 18
-      },
-      {
-        name: 'Global',
-        date: 'Jun 2 – 8, 2019',
-        hasData: true,
-        value: 15
-      },
-      {
-        name: 'Global',
-        date: 'Jun 9 – 15, 2019',
-        hasData: true,
-        value: 13
-      },
-      {
-        name: 'Global',
-        date: 'Jun 16 – 22, 2019',
-        hasData: true,
-        value: 12
-      },
-      {
-        name: 'Global',
-        date: 'Jun 23 – 29, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Jun 30 – Jul 6, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Jul 7 – 13, 2019',
-        hasData: true,
-        value: 11
-      },
-      {
-        name: 'Global',
-        date: 'Jul 14 – 20, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Jul 21 – 27, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Jul 28 – Aug 3, 2019',
-        hasData: true,
-        value: 11
-      },
-      {
-        name: 'Global',
-        date: 'Aug 4 – 10, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Aug 11 – 17, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Aug 18 – 24, 2019',
-        hasData: true,
-        value: 10
-      },
-      {
-        name: 'Global',
-        date: 'Aug 25 – 31, 2019',
-        hasData: true,
-        value: 9
-      },
-      {
-        name: 'Global',
-        date: 'Sep 1 – 7, 2019',
-        hasData: true,
-        value: 8
-      },
-      {
-        name: 'Global',
-        date: 'Sep 8 – 14, 2019',
-        hasData: true,
-        value: 7
-      },
-      {
-        name: 'Global',
-        date: 'Sep 15 – 21, 2019',
-        hasData: true,
-        value: 7
-      },
-      {
-        name: 'Global',
-        date: 'Sep 22 – 28, 2019',
-        hasData: true,
-        value: 6
-      },
-      {
-        name: 'Global',
-        date: 'Sep 29 – Oct 5, 2019',
-        hasData: true,
-        value: 7
-      },
-      {
-        name: 'Global',
-        date: 'Oct 6 – 12, 2019',
-        hasData: true,
-        value: 6
-      },
-      {
-        name: 'Global',
-        date: 'Oct 13 – 19, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Oct 20 – 26, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Oct 27 – Nov 2, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Nov 3 – 9, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Nov 10 – 16, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Nov 17 – 23, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Nov 24 – 30, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Dec 1 – 7, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Dec 8 – 14, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Dec 15 – 21, 2019',
-        hasData: true,
-        value: 5
-      },
-      {
-        name: 'Global',
-        date: 'Dec 22 – 28, 2019',
-        hasData: true,
-        value: 7
-      },
-      {
-        name: 'Global',
-        date: 'Dec 29, 2019 – Jan 4, 2020',
-        hasData: true,
-        value: 7
       }
     ]
   }
-]
+]}

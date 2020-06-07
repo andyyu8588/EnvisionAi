@@ -47,8 +47,9 @@ async function getData(keyword, year) {
 
       // prepare countryData contianer
       let countryData = {
-        country: searchedCountries[i],     
+        name: searchedCountries[i],     
         keyword,
+        query: keyword,
         data: []
       }
 
@@ -60,6 +61,7 @@ async function getData(keyword, year) {
         countryData.data.push({
           name: searchedCountries[i],
           date: element.formattedTime,
+          query: keyword,
           hasData: element.hasData[0],
           value: element.value[0]
         })
@@ -72,37 +74,6 @@ async function getData(keyword, year) {
       // console.log(err)
     })
   }
-
-  // get worldwide data
-  await googleTrends.interestOverTime({keyword, startTime, endTime})
-  .then((res) => {
-
-    // prepare countryData contianer
-    let countryData = {    
-      country: 'Global',
-      keyword,
-      data: []
-    }
-
-    // parse received data
-    let parsedData = JSON.parse(res)
-
-    // we push each week to countryData
-    parsedData.default.timelineData.forEach((element) => {
-      countryData.data.push({
-        name: 'Global',
-        date: element.formattedTime,
-        hasData: element.hasData[0],
-        value: element.value[0]
-      })
-    })
-
-    // push all the weeks to finalData
-    finalData.push(countryData)
-  })
-  .catch((err) => {
-    // console.log(err)
-  })
 }
 
 module.exports = router

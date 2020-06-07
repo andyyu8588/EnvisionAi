@@ -1,7 +1,7 @@
 
 export const defaultData =[
   [
-    { name: 'US', date: 'Jan 6 – 12, 2019', hasData: true, value: 37 },
+    { name: 'US', date: 'Jan 6 – 12, 2019', hasData: true, query: 'Infinity War',  value: 37 },
     { name: 'CA', date: 'Jan 6 – 12, 2019', hasData: true, value: 46 },
     { name: 'MX', date: 'Jan 6 – 12, 2019', hasData: true, value: 24 },
     { name: 'RU', date: 'Jan 6 – 12, 2019', hasData: true, value: 37 },

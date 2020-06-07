@@ -85,8 +85,6 @@ export class SidebarComponent implements OnInit, OnDestroy{
       this.sentData = sentData
       this.data = this.sentData
     })
-    console.log(this.original)
-
   }
 
   formatLabel(value: number) {
@@ -96,9 +94,11 @@ export class SidebarComponent implements OnInit, OnDestroy{
 
     return value;
   }
-  changeSelect(){
+
+  changeSelect() {
     this.select = false
   }
+
   selected(event){
     this. select = true
     if (typeof(event)=="string"){
@@ -107,18 +107,18 @@ export class SidebarComponent implements OnInit, OnDestroy{
     else {
       this.SidebarService.parseSendData(event.name)
     }
-    console.log(this.sentData)
   }
-  checkLoading(){
+
+  checkLoading() {
     return this.loading
   }
+
   ngOnDestroy(){
     this.Index.unsubscribe()
     this.arraybyDate.unsubscribe()
     this.arrayOriginal.unsubscribe()
     this.isLoading.unsubscribe()
     this.dataSent.unsubscribe()
-
   }
 
 }

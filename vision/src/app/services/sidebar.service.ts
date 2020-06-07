@@ -9,7 +9,7 @@ import { originalDefaultData } from './originaldefault'
 })
 export class SidebarService implements OnDestroy{
 
-  private originalArray:Array<any> = originalDefaultData
+  private originalArray:any = originalDefaultData
   private _original: BehaviorSubject<any> = new BehaviorSubject(this.originalArray)
   public original: Observable<any> = this._original.asObservable()
 
@@ -41,14 +41,20 @@ export class SidebarService implements OnDestroy{
   }
   parseSendData(event){
     let analysis = [];
-    this._original.value.forEach(country => {
-      if (country.country == event){
-          country.data.forEach(week => {
-            analysis.push(week)
-          })
+    let originalData = {name: event, series: []}
+    this._original.value.data.forEach((country) => {
+      if (country.name == event) {
+          for (let i = 0; i < 52; i++) {
+            originalData.series.push({
+              name: i.toString(),
+              date: country.data[i].date,
+              query: country.data[i].query,
+              value: country.data[i].value
+            })
+          }
       }
-
     });
+    analysis.push(originalData)
     this._sentData.next(analysis)
   }
 

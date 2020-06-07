@@ -9,13 +9,18 @@
     <!-- <hr> -->
 
     <mat-tab-group>
-      <mat-tab label="One">
+      <mat-tab label="Global">
         <button mat-button (click) ='changeView()'>
           change view
         </button>
         <div *ngIf="!checkLoading()">
 
+
           <div class="container">
+
+            <h1>{{ byDate[0][0].query }}</h1>
+
+
             <div><h3>{{byDate[sliderIndex][0].date}}</h3></div>
 
             <mat-slider
@@ -61,9 +66,14 @@
           </div>
         </div>
       </mat-tab>
-      <mat-tab label="Two" *ngIf="select">
+      <mat-tab label="Country Analysis" *ngIf="select">
         <button  mat-button label='close' (click)="changeSelect()">
           <span>&times;</span>
+        </button>
+
+        <h1 style="text-align: center;">{{ sentData[0].series[0].query }}</h1>
+        <button mat-raised-button>
+          Analyze
         </button>
 
         <ngx-charts-line-chart
@@ -75,8 +85,8 @@
         showYAxisLabel="true"
         xAxis="popularity"
         yAxis="time(weeks)"
-        xAxisLabel="true"
-        yAxisLabel="true"
+        xAxisLabel="time(weeks)"
+        yAxisLabel="popularity"
         timeline="true"
         >
 
