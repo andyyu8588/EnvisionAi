@@ -1,5 +1,5 @@
 
-    <mat-drawer-container style="overflow-x: hidden;" class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
+    <mat-drawer-container class="example-sidenav-container" [hidden]='!drawer.opened' autosize>
 
       <mat-sidenav #drawer class="container-fluid" mode="side" opened='true'>
         <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
@@ -39,7 +39,7 @@
   </mat-drawer-container>
 
   <div id="openBtn">
-      <button type="button" mat-button (click)="drawer.toggle()">
+      <button type="button" mat-raised-button (click)="drawer.toggle()">
       Open Sidebar
       </button>
   </div>
