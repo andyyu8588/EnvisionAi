@@ -18,7 +18,7 @@ export class SidebarService implements OnDestroy{
   public byDate: Observable<any> = this._byDate.asObservable()
 
   private sendData: Array<any> = []
-  private _sentData: BehaviorSubject<any> = new BehaviorSubject(this.sendData)
+  public _sentData: BehaviorSubject<any> = new BehaviorSubject(this.sendData)
   public sentData: Observable<any> = this._sentData.asObservable()
 
   private Index: number = 0

@@ -21,6 +21,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
   single: Array<{[key: string]: any}>;
   data: Array<{[key: string]: any}>;
   viewValue=true
+  predictions: any
 
   // options
   showLegend: boolean = true;
@@ -39,7 +40,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
     '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF']
   };
 
-  constructor(private SidebarService: SidebarService) {
+  constructor(private SidebarService: SidebarService, private tensorflowService: TensorflowService) {
   }
   byDate: any = []
   private arraybyDate: Subscription
@@ -107,6 +108,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
     else {
       this.SidebarService.parseSendData(event.name)
     }
+    console.log(this.sentData)
   }
 
   checkLoading() {
@@ -121,4 +123,30 @@ export class SidebarComponent implements OnInit, OnDestroy{
     this.dataSent.unsubscribe()
   }
 
+  onAnalyze() {
+    let sampleData = [10, 20, 15]
+
+    let predictedData = [{
+      name: 'CA',
+      series: []
+    }]
+    
+    for (let i = 0; i < 3; i++) {
+      let week = 51 + i + 1
+      predictedData[0].series.push({
+        name: week.toString(),
+        value: sampleData[i]
+      })
+    }
+
+    this.sentData[0].series.reverse()
+
+    this.sentData[0].series.forEach(element => {
+      predictedData[0].series.unshift(element)
+    });
+
+    console.log(predictedData)
+
+    this.SidebarService._sentData.next(predictedData)
+  }
 }

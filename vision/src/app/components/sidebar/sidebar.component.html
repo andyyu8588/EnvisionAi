@@ -71,8 +71,8 @@
           <span>&times;</span>
         </button>
 
-        <h1 style="text-align: center;">{{ sentData[0].series[0].query }}</h1>
-        <button mat-raised-button>
+        <!-- <h1 style="text-align: center;">{{ sentData[0].series[0].query }}</h1> -->
+        <button mat-raised-button (click)='onAnalyze()'>
           Analyze
         </button>
 
