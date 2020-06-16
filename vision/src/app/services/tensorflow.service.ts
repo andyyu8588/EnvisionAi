@@ -46,7 +46,6 @@ export class TensorflowService implements OnDestroy {
   }
 
   inputValues(values: any) {
-    console.log(this.selectedData)
     return new Promise((resolve, reject) => {
       this.selectedData = []
       values.forEach((week) => {
@@ -60,7 +59,6 @@ export class TensorflowService implements OnDestroy {
     // import keras model from backend w/o weights
     tf.loadLayersModel(environment.backend.Tfmodel, {strict:false})
     .then((layerModel) => {
-      console.log('model imported successfully')
       this.Model = layerModel
       // this.createDataset()
       // .then(() => {
@@ -160,7 +158,6 @@ export class TensorflowService implements OnDestroy {
           // })
         })
       } else {
-        console.log('bruh')
         reject()
       }  
     })
@@ -175,7 +172,6 @@ export class TensorflowService implements OnDestroy {
           loss: tf.losses.huberLoss,
           metrics: ['mse']
         })
-        console.log('model compiled')
         $("body").find("*").attr("disabled", "disabled");
         $("body").find("a").click(function (e) { e.preventDefault(); });
         this.Model.fit(this.inputSet, this.targetSet, {
