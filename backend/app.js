@@ -7,6 +7,7 @@ const TfmodelRoute = require('./routes/Tfmodel')
 const denseRoute = require('./routes/densemodel')
 const trendsapiRoute = require('./routes/trendsapi')
 const TestRoute = require('./routes/testroute')
+const downloadRoute = require('./routes/download')
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
@@ -22,6 +23,7 @@ app.use('/Tfmodel', TfmodelRoute)
 app.use('/densemodel', denseRoute)
 app.use('/search', trendsapiRoute)
 app.use('/home', TestRoute)
+app.use('/download', downloadRoute)
 
 // serve angular
 // app.use('/',(req, res, next) => {
