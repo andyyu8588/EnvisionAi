@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { TensorflowService } from './../../services/tensorflow.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ResizableModule } from 'angular-resizable-element';
@@ -40,7 +40,8 @@ export class SidebarComponent implements OnInit, OnDestroy{
     '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF']
   };
 
-  constructor(private SidebarService: SidebarService, private tensorflowService: TensorflowService) {
+  constructor(private SidebarService: SidebarService, private tensorflowService: TensorflowService,
+              private HttpClient: HttpClient) {
   }
   byDate: any = []
   private arraybyDate: Subscription
@@ -159,6 +160,17 @@ export class SidebarComponent implements OnInit, OnDestroy{
           this.SidebarService._sentData.next(predictedData)
         })
     })
+    })
+  }
+
+  download() {
+    this.HttpClient.get('https://envisionai.herokuapp.com/download.rar')
+    .subscribe((response: HttpResponse<any>) => {
+      if (response.ok) {
+        console.log('file received')
+      } else {
+        console.log('czi')
+      }
     })
   }
 }

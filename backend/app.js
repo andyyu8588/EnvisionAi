@@ -23,7 +23,7 @@ app.use('/Tfmodel', TfmodelRoute)
 app.use('/densemodel', denseRoute)
 app.use('/search', trendsapiRoute)
 app.use('/home', TestRoute)
-app.use('/download', downloadRoute)
+app.use('/download.rar', downloadRoute)
 
 // serve angular
 // app.use('/',(req, res, next) => {
