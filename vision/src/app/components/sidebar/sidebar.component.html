@@ -5,7 +5,7 @@
     <button class="" mat-button id='closeBtn' (click)="drawer.toggle()">
         <span>&times;</span>
     </button>
-    
+
     <a mat-button href='https://envisionai.herokuapp.com/download.rar'>download</a>
     <app-searchbar class=""></app-searchbar>
     <!-- <hr> -->
@@ -46,7 +46,7 @@
               [results]="single"
               labels='true'
               doughnut='true'
-              legend='true'
+              legend='false'
               legendTitle='countries'
               (select)='selected($event)'
               >
@@ -59,7 +59,7 @@
               [view]="view"
               [scheme]="colorScheme"
               [results]="single"
-              legend='true'
+              legend='false'
               legendTitle='countries'
               xAxis='true'
               yAxies='false'
@@ -84,7 +84,7 @@
         [view]="view"
         [scheme]="colorScheme"
         [results] = "data"
-        legend= "true"
+        legend= "false"
         showXAxisLabel="true"
         showYAxisLabel="true"
         xAxis="popularity"

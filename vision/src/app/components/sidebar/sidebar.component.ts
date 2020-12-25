@@ -128,7 +128,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
     let values = []
 
     this.sentData[0].series.forEach((element) => {
-      values.push(element.value)
+      values.push(element.value);
     })
 
     this.tensorflowService.inputValues(values).then((done) => {
@@ -140,7 +140,7 @@ export class SidebarComponent implements OnInit, OnDestroy{
             name: 'CA',
             series: []
           }]
-          
+
           for (let i = 0; i < sampleData.length; i++) {
             let week = 51 + i + 1
             predictedData[0].series.push({

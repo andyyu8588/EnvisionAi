@@ -24,14 +24,11 @@ export class TensorflowService implements OnDestroy {
   // [61, 59, 63, 66, 67, 71, 63, 74, 77, 71, 87, 80, 82, 86, 78, 81, 76, 73, 81, 93, 86, 76, 86, 91, 90, 74, 81, 100, 88, 85, 85, 86, 81, 72, 75, 73, 74, 75, 76, 77, 68, 71, 66, 73, 67, 61, 52, 55, 59, 48, 49, 56]
 
   // training parameters
-  epochs: number = 27
+  epochs: number = 100;
   split: number = Math.floor(52)
-  windowSize: number = 4
-  batchSize: number = 3
+  windowSize: number = 26
+  batchSize: number = 26
 
-  // finished dataset
-  // trainSet = [tf.ones([2,2])]
-  // targetSet = [tf.ones([2,1])]
   inputSet: tf.Tensor
   targetSet: tf.Tensor
 
@@ -52,23 +49,14 @@ export class TensorflowService implements OnDestroy {
         this.selectedData.push(week)
       })
       resolve(this.selectedData)
-    }) 
-  } 
+    })
+  }
 
   loadModel() {
     // import keras model from backend w/o weights
     tf.loadLayersModel(environment.backend.Tfmodel, {strict:false})
     .then((layerModel) => {
       this.Model = layerModel
-      // this.createDataset()
-      // .then(() => {
-      //   console.log(this.inputSet)
-      //   console.log(this.targetSet)
-        // this.train()
-      // })
-      // .catch(() => {
-      //   console.log('dfda')
-      // })
     })
     .catch((err) => {
       console.log(err)
@@ -92,7 +80,7 @@ export class TensorflowService implements OnDestroy {
     }
   }
 
-  // slice arrays for createDataset 
+  // slice arrays for createDataset
   sliceArr(arr: any[]): Promise<{[key: string]: any}> {
     return new Promise((resolve, reject) => {
       let inputs: any[] = []
@@ -115,7 +103,7 @@ export class TensorflowService implements OnDestroy {
     })
 
   }
-  
+
   // creates dataset for training
   createDataset(): any {
     return new Promise((resolve, reject) => {
@@ -139,7 +127,7 @@ export class TensorflowService implements OnDestroy {
           // console.log(_inputSet.length, _inputTargets.length)
           this.inputSet = tf.tensor2d(_inputSet, [(_inputSet.length/(this.windowSize-1)), this.windowSize -1], 'int32')
           this.targetSet = tf.tensor2d(_inputTargets, [_inputTargets.length, 1], 'int32')
-          
+
           resolve()
           // this.sliceArr(_validate)
           // .then((res) => {
@@ -159,10 +147,10 @@ export class TensorflowService implements OnDestroy {
         })
       } else {
         reject()
-      }  
+      }
     })
   }
-  
+
   // compile & train the model
   train(): any {
     return new Promise((resolve, reject) => {
@@ -183,7 +171,6 @@ export class TensorflowService implements OnDestroy {
         .then((info) => {
           $("body").find("*").removeAttr("disabled");
           $("body").find("a").unbind("click");
-          console.log(info)
           console.log('training complete: mae:', info.history.mse.slice(-1))
           // console.log(this.Model.predict(tf.tensor([12])).toString())
           resolve(this.predict())
@@ -194,13 +181,13 @@ export class TensorflowService implements OnDestroy {
           console.log(err)
         })
       }
-    })    
+    })
   }
 
   predict() {
     let x_axis: number = this.selectedData.slice(-1)[0]
     let predictions: any[] = []
-    for (let x=0; x<6; x++) {
+    for (let x=0; x<24; x++) {
       let pred = this.Model.predict(tf.tensor(x_axis, [1,1]))
       let ok = pred.toString().substring(14, pred.toString().length - 4)
       predictions.push(parseFloat(ok))
