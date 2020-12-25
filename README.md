@@ -1,7 +1,7 @@
 # EnvisionAI
 Trend analysis and predictor
 
-# Setup
+## Setup
 `npm i` in root  
 `npm i` in `vision` directory  
 
